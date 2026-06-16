@@ -1,0 +1,6 @@
+geopandas
+folium
+shapely
+geopy
+osmnx
+rasterio

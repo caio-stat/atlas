@@ -1,0 +1,4 @@
+unstructured
+layoutparser
+pdfplumber
+pymupdf

@@ -1,0 +1,7 @@
+nltk
+spacy
+gensim
+transformers
+sentence-transformers
+datasets
+tokenizers

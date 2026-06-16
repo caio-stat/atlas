@@ -1,0 +1,5 @@
+scipy
+statsmodels
+pingouin
+researchpy
+sympy

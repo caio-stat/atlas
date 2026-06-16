@@ -1,0 +1,9 @@
+psutil
+py-cpuinfo
+platformdirs
+rich
+typer
+click
+python-dotenv
+pywin32
+wmi

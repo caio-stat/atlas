@@ -1,0 +1,6 @@
+matplotlib
+seaborn
+plotly
+altair
+bokeh
+wordcloud

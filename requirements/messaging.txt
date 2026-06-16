@@ -1,0 +1,5 @@
+pika
+aio-pika
+redis
+rq
+celery

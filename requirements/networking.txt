@@ -1,0 +1,10 @@
+requests
+httpx
+ping3
+dnspython
+netifaces
+psutil
+scapy
+paramiko
+fabric
+speedtest-cli

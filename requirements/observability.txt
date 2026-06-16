@@ -1,0 +1,6 @@
+loguru
+structlog
+prometheus-client
+opentelemetry-api
+opentelemetry-sdk
+sentry-sdk

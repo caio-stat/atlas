@@ -1,0 +1,12 @@
+n8n
+python-dotenv
+schedule
+apscheduler
+prefect
+invoke
+fabric
+pyautogui
+watchdog
+celery
+redis
+rq

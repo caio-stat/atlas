@@ -1,0 +1,10 @@
+langchain
+langchain-community
+langgraph
+llama-index
+chromadb
+faiss-cpu
+ollama
+openai
+anthropic
+google-generativeai

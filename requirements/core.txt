@@ -1,0 +1,8 @@
+numpy
+pandas
+polars
+pyarrow
+duckdb
+openpyxl
+xlsxwriter
+tabulate

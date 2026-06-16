@@ -1,0 +1,6 @@
+invoke
+fabric
+ansible
+docker
+python-gitlab
+PyGithub

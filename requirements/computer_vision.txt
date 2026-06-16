@@ -1,0 +1,7 @@
+opencv-python
+opencv-contrib-python
+pillow
+albumentations
+ultralytics
+scikit-image
+easyocr

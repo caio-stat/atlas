@@ -1,0 +1,4 @@
+crewai
+autogen-agentchat
+pydantic-ai
+smolagents
