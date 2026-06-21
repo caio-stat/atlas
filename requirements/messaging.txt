@@ -1,11 +1,16 @@
+# RabbitMQ
 pika
 aio-pika
+
+# Redis queues
 redis
 rq
 celery
 
+# Kafka
 kafka-python
 confluent-kafka
 faust-cchardet
 
+# NATS
 nats-py

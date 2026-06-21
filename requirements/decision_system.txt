@@ -25,31 +25,3 @@ plotly
 typer
 rich
 python-dotenv
-
-# Decision models
-scikit-learn
-networkx
-ortools
-cvxpy
-
-# State and simulation
-transitions
-simpy
-
-# Reinforcement learning
-gymnasium
-stable-baselines3
-
-# Data
-numpy
-pandas
-scipy
-
-# Visualization
-matplotlib
-plotly
-
-# Utilities
-typer
-rich
-python-dotenv

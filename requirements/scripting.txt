@@ -22,7 +22,6 @@ pydantic-settings
 # Reports and output
 jinja2
 tabulate
-rich
 
 # HTTP/API automation
 requests

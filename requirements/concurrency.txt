@@ -1,19 +1,7 @@
-anyio
-trio
-uvloop
-rx
-blinker
-pyee
-redis
-celery
-rq
-
-apscheduler
-schedule
-prefect
 # Async foundations
 anyio
 trio
+uvloop
 
 # Async IO
 aiofiles
@@ -34,6 +22,7 @@ dramatiq
 # Scheduling
 apscheduler
 schedule
+prefect
 
 # Monitoring and profiling
 psutil

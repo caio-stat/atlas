@@ -1,991 +1,566 @@
 # Atlas
 
-<p align="center">
-  <strong>Um laboratório modular de Dados, IA, Estatística, Automação, Infraestrutura e Engenharia de Software.</strong>
-</p>
+> Um laboratório modular para dados, estatística, inteligência artificial, automação, infraestrutura e engenharia de software.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.11+-blue" alt="Python">
-  <img src="https://img.shields.io/badge/FastAPI-Backend-009688" alt="FastAPI">
-  <img src="https://img.shields.io/badge/PostgreSQL-Banco%20de%20Dados-336791" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/Docker-Containers-2496ED" alt="Docker">
-  <img src="https://img.shields.io/badge/Status-Fundação%20Inicial-yellow" alt="Status do Projeto">
-  <img src="https://img.shields.io/badge/Licença-MIT-green" alt="Licença">
-</p>
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-funda%C3%A7%C3%A3o-009688)](https://fastapi.tiangolo.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-local-336791)](https://www.postgresql.org/)
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED)](https://www.docker.com/)
+[![Status](https://img.shields.io/badge/status-funda%C3%A7%C3%A3o-yellow)](#estado-atual)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-<p align="center">
-  🌎 Idioma: <a href="README.md">English</a> | Português
-</p>
+[English](README.md) | **Português**
 
----
+## Sumário
 
-## Visão Geral
+- [Visão geral](#visão-geral)
+- [Estado atual](#estado-atual)
+- [Visão e objetivos](#visão-e-objetivos)
+- [Arquitetura](#arquitetura)
+- [Mapa do repositório](#mapa-do-repositório)
+- [Trilhas técnicas](#trilhas-técnicas)
+- [Módulos do sistema](#módulos-do-sistema)
+- [Estratégia de dependências](#estratégia-de-dependências)
+- [Início rápido](#início-rápido)
+- [Comportamento da API](#comportamento-da-api)
+- [Fluxo de desenvolvimento](#fluxo-de-desenvolvimento)
+- [Testes e qualidade](#testes-e-qualidade)
+- [Sistema de documentação](#sistema-de-documentação)
+- [Roadmap](#roadmap)
+- [Uso responsável](#uso-responsável)
+- [Evidências de portfólio](#evidências-de-portfólio)
+- [Licença](#licença)
+- [Autor](#autor)
 
-**Atlas** é um portfólio técnico de longo prazo e um laboratório de aprendizado criado para evoluir como um ecossistema modular de:
+## Visão geral
 
-* engenharia de software
-* engenharia de dados
-* estatística
-* machine learning
-* deep learning
-* IA generativa
-* automação
-* ferramentas de suporte técnico
-* redes
-* computação em nuvem
-* sistemas distribuídos
-* aplicações web e mobile
+O Atlas é um portfólio técnico de longo prazo e um laboratório de aprendizagem
+projetado para conectar assuntos frequentemente estudados em separado:
+engenharia backend, pipelines de dados, estatística, métodos numéricos, machine
+learning, deep learning, IA generativa, automação, suporte técnico, redes,
+operações cloud, observabilidade, aplicações mobile, sistemas embarcados e
+simulação interativa.
 
-O objetivo não é construir tutoriais isolados ou scripts desconectados. O Atlas está sendo desenvolvido como um ecossistema real, incremental e documentado, onde cada módulo demonstra uma competência profissional por meio de código, testes, decisões de arquitetura e casos de uso práticos.
+O projeto não pretende se tornar uma pilha de scripts sem relação ou um catálogo
+de tecnologias instaladas para aparência. Toda capacidade relevante deve
+evoluir para uma pequena fatia de produto com problema claro, contratos
+explícitos, código executável, testes, documentação, limitações e evidências.
 
-O Atlas começa como um **monólito modular** e pode evoluir para serviços distribuídos apenas quando houver uma justificativa técnica clara.
+O Atlas começa como um **monólito modular**. Distribuição, filas, recursos cloud
+ou serviços independentes devem surgir somente quando um caso de uso
+implementado criar necessidade concreta de isolamento, escala, latência,
+confiabilidade ou independência de deploy.
 
----
+A pergunta central é:
 
-## Status Atual
+> Como uma pessoa em formação técnica pode evoluir de scripts e notebooks para sistemas manuteníveis, produtos de dados confiáveis e aplicações inteligentes responsáveis?
 
-O Atlas está em sua **fase inicial de fundação**.
+## Estado atual
 
-O repositório atualmente contém a base inicial do projeto e uma pasta `requirements/` em crescimento, que mapeia as principais trilhas de estudo e experimentação técnica.
+O Atlas está na **fase de fundação**. A documentação agora define em detalhes as
+trilhas técnicas e as fronteiras dos módulos, enquanto o código executável ainda
+é pequeno.
 
-Foco atual:
+| Capacidade | Status | Evidência |
+|---|---|---|
+| Processo FastAPI | Implementação inicial | [`backend/app/main.py`](backend/app/main.py) |
+| Endpoints raiz, saúde e versão | Implementados | [`backend/tests/test_health.py`](backend/tests/test_health.py) |
+| Serviço PostgreSQL local | Configurado | [`docker-compose.yml`](docker-compose.yml) |
+| Engine e factory de sessão SQLAlchemy | Scaffold inicial | [`backend/app/database.py`](backend/app/database.py) |
+| Entidade e caso de registro | Scaffold vazio | [`backend/app/domain`](backend/app/domain/README.pt-BR.md), [`backend/app/use_cases`](backend/app/use_cases/README.pt-BR.md) |
+| Decisão sobre monólito modular | Apenas placeholder de ADR | [`backend/0001-monolito-modular.md`](backend/0001-monolito-modular.md) |
+| Trilhas de dependências | 76 conjuntos organizados | [`requirements/README.pt-BR.md`](requirements/README.pt-BR.md) |
+| Documentação das trilhas | 21 guias bilíngues | [`docs/tracks/README.pt-BR.md`](docs/tracks/README.pt-BR.md) |
+| Atlas Mobile Lab | Stack especificada; aplicação ainda não criada | [`docs/modules/mobile-lab/README.pt-BR.md`](docs/modules/mobile-lab/README.pt-BR.md) |
 
-* manter o repositório organizado e compreensível
-* documentar a visão arquitetural de longo prazo
-* construir a fundação do backend de forma incremental
-* evitar overengineering cedo demais
-* separar dependências por domínio técnico
-* transformar estudos em módulos com valor de portfólio
-
-Próximo marco imediato:
+O marco imediato é uma fatia vertical completa:
 
 ```text
-Atlas Core + Health API
+settings tipados
+    ↓
+rota versionada da API
+    ↓
+caso de uso de registro de fonte
+    ↓
+entidade e porta de repository
+    ↓
+adapter SQLAlchemy e migração
+    ↓
+testes unitários + contrato + integração
 ```
 
-Esse primeiro marco deve incluir:
+## Visão e objetivos
 
-* estrutura inicial com FastAPI
-* endpoint `/health`
-* endpoint `/version`
-* conexão com PostgreSQL
-* organização modular básica
-* primeira entidade de domínio
-* primeiro caso de uso
-* testes iniciais com `pytest`
-* primeiro Architecture Decision Record, ou ADR
+O Atlas possui quatro papéis simultâneos.
 
----
+| Papel | Significado |
+|---|---|
+| Portfólio técnico | Demonstrar engenharia aplicada por evidências revisáveis, não por listas de habilidades. |
+| Laboratório de aprendizagem | Estudar conceitos dentro de módulos e experimentos reais, não em snippets isolados. |
+| Plataforma modular | Reutilizar contratos estáveis entre dados, IA, automação, operações e aplicações clientes. |
+| Narrativa de engenharia | Registrar como decisões, tradeoffs, qualidade e fronteiras evoluem ao longo do tempo. |
 
-## Objetivos do Projeto
+Objetivos do projeto:
 
-O Atlas tem como objetivo integrar e demonstrar conhecimento em:
+- construir aplicações backend Python manuteníveis;
+- conectar coleta, ETL, estatística, ML e relatórios;
+- estudar fundamentos matemáticos por experimentos executáveis;
+- construir RAG e agentes com avaliação e controle de políticas;
+- automatizar rotinas operacionais e de suporte com segurança;
+- explorar redes, mensageria, concorrência, resiliência e observabilidade;
+- criar clientes mobile e edge com restrições explícitas de offline e segurança;
+- praticar DDD, TDD, arquitetura, refatoração e documentação de forma pragmática;
+- publicar demonstrações que expliquem premissas e limitações com honestidade.
 
-* desenvolvimento backend com Python
-* programação orientada a objetos em Python
-* FastAPI e desenho de APIs REST
-* PostgreSQL e SQL
-* coleta de dados, web scraping e ETL
-* OCR e inteligência documental
-* engenharia de dados e pipelines analíticos
-* estatística, probabilidade, inferência, regressão e modelagem Bayesiana
-* métodos numéricos, otimização e simulação
-* machine learning e rastreamento de experimentos
-* deep learning com redes neurais, embeddings, visão computacional, NLP e Transformers
-* IA generativa, RAG e agentes inteligentes
-* automação de fluxos com ferramentas como n8n
-* automação de suporte/helpdesk e scripts de diagnóstico
-* redes, sockets e diagnóstico de infraestrutura
-* mensageria, filas e processamento assíncrono
-* cloud computing, DevOps e observabilidade
-* análise geoespacial, dados epidemiológicos e bases públicas
-* dashboards, visualização de dados e storytelling
-* desenvolvimento Android com Kotlin e aplicações offline-first
-* Linux, segurança, concorrência e sistemas distribuídos
-* arquitetura de software, DDD, TDD e Design Patterns
+## Arquitetura
 
----
+### Princípios
 
-## Filosofia Arquitetural
+1. Começar com a arquitetura mais simples que atende ao caso de uso atual.
+2. Manter regras de domínio independentes de HTTP, SQLAlchemy, SDKs cloud e UI.
+3. Usar contratos explícitos nas fronteiras e adapters substituíveis para sistemas externos.
+4. Adicionar infraestrutura em resposta a necessidades medidas, não à escala imaginada.
+5. Preferir fatias verticais a grandes fundações horizontais sem comportamento visível.
+6. Aplicar DDD e TDD quando melhorarem linguagem, feedback e segurança de mudanças.
+7. Registrar decisões transversais ou caras por Architecture Decision Records.
+8. Tratar telemetria, segurança, privacidade, rollback e documentação como engenharia.
+9. Instalar dependências por trilha focada, não em um ambiente universal.
+10. Separar claramente arquitetura planejada de comportamento implementado.
 
-O Atlas segue uma estratégia arquitetural pragmática:
+### Runtime atual
 
-1. **Começar simples**, com um monólito modular.
-2. **Manter fronteiras claras** entre domínio, aplicação, infraestrutura e interfaces.
-3. **Usar DDD de forma pragmática**, sem transformar o projeto em cerimônia abstrata.
-4. **Aplicar TDD quando isso trouxer clareza e segurança**.
-5. **Documentar decisões relevantes** por meio de ADRs.
-6. **Separar módulos em serviços apenas no futuro**, quando houver necessidade real de escala, deploy independente ou isolamento tecnológico.
-7. **Instalar dependências por trilha**, e não tudo de uma vez.
+```text
+Cliente
+  ↓ HTTP
+Aplicação FastAPI (`backend/app/main.py`)
+  ↓
+Função de rota síncrona
+  ↓
+Resposta JSON estática
 
-A direção arquitetural inicial é inspirada por:
+Container PostgreSQL ← configurado localmente, ainda não usado por endpoint
+```
 
-* Monólito Modular
-* Clean Architecture
-* Arquitetura Hexagonal
-* Domain-Driven Design
-* Test-Driven Development
-* Arquitetura orientada a eventos, quando fizer sentido
-* Arquitetura orientada a dados, quando fizer sentido
+### Fluxo modular pretendido
 
----
+```text
+Web / Mobile / Automação / Agente
+                ↓
+          Router da Atlas API
+                ↓
+          Caso de uso
+                ↓
+       Modelo de domínio e portas
+                ↑
+ Adapters SQL / fila / provedores
+                ↓
+ PostgreSQL / broker / cloud / modelo
+```
 
-## Estrutura Geral Planejada
+O fluxo pretendido é orientação de direção. Ele não autoriza criar todas as
+camadas antes que o primeiro caso de uso precise delas.
 
-O repositório pode evoluir para uma organização parecida com esta:
+### Regras de fronteira
+
+- Módulos de API traduzem aspectos de transporte; não controlam políticas de negócio.
+- Casos de uso coordenam uma intenção da aplicação e permanecem neutros a transporte.
+- O domínio protege linguagem e invariantes sem importar frameworks.
+- Infraestrutura implementa portas e controla detalhes de I/O externo.
+- A raiz de composição conecta dependências e ciclo de vida do processo.
+- Comunicação entre módulos usa contratos documentados, não detalhes privados.
+
+## Mapa do repositório
 
 ```text
 atlas/
+├── analytics/                      # Scaffold de código analítico reutilizável
 ├── apps/
-│   ├── web/                         # Dashboards React e interface do portfólio
-│   ├── mobile/                      # App Android Kotlin, offline-first
-│   └── desktop/                     # Experimentos futuros com desktop
-│
-├── services/
-│   ├── atlas_api/                   # Aplicação principal FastAPI
-│   ├── atlas_worker/                # Workers e tarefas em segundo plano
-│   ├── atlas_ai/                    # RAG, agentes e integrações com LLMs
-│   ├── atlas_scraper/               # Web scraping e coleta de dados
-│   ├── atlas_stats/                 # Estatística, probabilidade e regressão
-│   ├── atlas_support/               # Diagnósticos de suporte/helpdesk
-│   ├── atlas_networking/            # Experimentos e diagnósticos de rede
-│   └── atlas_automation/            # n8n, WhatsApp, relatórios e workflows
-│
-├── packages/
-│   ├── atlas_core/                  # Entidades, objetos de valor e casos de uso
-│   ├── atlas_shared/                # Schemas, DTOs e utilitários compartilhados
-│   └── atlas_plugins/               # Provedores e integrações plugáveis
-│
-├── requirements/
-│   ├── core.txt
-│   ├── dev.txt
-│   ├── data.txt
-│   ├── statistics.txt
-│   ├── ml.txt
-│   ├── deep_learning.txt
-│   ├── generative_ai.txt
-│   ├── scraping.txt
-│   ├── ocr.txt
-│   ├── document_intelligence.txt
-│   ├── support.txt
-│   ├── networking.txt
-│   ├── cloud.txt
-│   ├── messaging.txt
-│   └── ...
-│
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   ├── warehouse/
-│   └── samples/
-│
-├── notebooks/
-│   ├── statistics/
-│   ├── machine_learning/
-│   ├── deep_learning/
-│   ├── calculus/
-│   └── experiments/
-│
-├── infra/
-│   ├── docker/
-│   ├── postgres/
-│   ├── monitoring/
-│   └── github_actions/
-│
+│   └── mobile/                     # Scaffold de implementação do Atlas Pocket
+├── backend/
+│   ├── app/
+│   │   ├── api/                    # Scaffold da interface HTTP
+│   │   ├── core/                   # Scaffold de settings tipados
+│   │   ├── domain/                 # Scaffold do modelo de domínio
+│   │   ├── use_cases/              # Scaffold de casos de uso
+│   │   ├── database.py             # Configuração SQLAlchemy de desenvolvimento
+│   │   └── main.py                 # Aplicação FastAPI atual
+│   ├── tests/                      # Testes atuais da API
+│   ├── README.md                   # Guia operacional e arquitetural do backend
+│   └── requirements.txt            # Ambiente executável fixado do backend
 ├── docs/
-│   ├── architecture/
-│   ├── adr/
-│   ├── roadmap/
-│   ├── modules/
-│   └── portfolio/
-│
-├── tests/
-│   ├── unit/
-│   ├── integration/
-│   ├── e2e/
-│   └── load/
-│
-├── docker-compose.yml
-├── pyproject.toml
+│   ├── modules/                    # Documentação de módulos concretos
+│   ├── tracks/                     # 21 guias técnicos de execução
+│   └── README.md                   # Central de documentação
+├── datasets/                       # Scaffold de governança de datasets
+├── infra/                          # Scaffold de infraestrutura e runbooks
+├── notebooks/                      # Scaffold de exploração reprodutível
+├── requirements/                   # 76 conjuntos focados de dependências
+├── scrapers/                       # Scaffold de coleta responsável
+├── scripts/
+│   └── mobile/                     # Scaffold de automação mobile
+├── docker-compose.yml              # Serviço PostgreSQL local
+├── LICENSE
 ├── README.md
-└── LICENSE
+└── README.pt-BR.md
 ```
 
-Essa estrutura representa uma direção planejada, não uma promessa de que todos os diretórios já existem hoje.
+Diretórios descritos nos roadmaps são planejados e devem ser criados apenas
+quando uma implementação real precisar deles.
 
----
+## Trilhas técnicas
 
-## Trilhas de Requirements
+O Atlas possui 21 trilhas técnicas de longo prazo. Cada guia ligado abaixo
+contém missão, escopo, entregáveis, dependências, integrações, evidências de
+qualidade, roadmap e definição de pronto.
 
-A pasta `requirements/` é organizada por domínio técnico. Isso evita instalar um ambiente gigante e frágil antes de cada módulo realmente precisar daquelas dependências.
+### Fundação e interfaces
 
-| Arquivo                                  | Finalidade                                                                            |
-| ---------------------------------------- | ------------------------------------------------------------------------------------- |
-| `requirements/core.txt`                  | Ferramentas centrais para arrays, dataframes, tabelas e armazenamento analítico local |
-| `requirements/dev.txt`                   | Ferramentas de desenvolvimento, formatação, lint, testes e qualidade local            |
-| `requirements/data.txt`                  | Análise e manipulação geral de dados                                                  |
-| `requirements/visualization.txt`         | Gráficos, dashboards e storytelling                                                   |
-| `requirements/statistics.txt`            | Estatística descritiva, inferência e modelagem estatística                            |
-| `requirements/bayesian.txt`              | Modelagem Bayesiana e programação probabilística                                      |
-| `requirements/ml.txt`                    | Machine learning clássico                                                             |
-| `requirements/deep_learning.txt`         | Redes neurais e frameworks de deep learning                                           |
-| `requirements/nlp.txt`                   | Processamento de linguagem natural                                                    |
-| `requirements/computer_vision.txt`       | Processamento de imagens e visão computacional                                        |
-| `requirements/generative_ai.txt`         | LLMs, embeddings e fluxos de IA generativa                                            |
-| `requirements/ai.txt`                    | Utilitários gerais de IA e integrações                                                |
-| `requirements/agents.txt`                | Workflows agentivos e experimentos multiagentes                                       |
-| `requirements/scraping.txt`              | Web scraping, crawling e automação de navegador                                       |
-| `requirements/ocr.txt`                   | OCR para imagens e documentos escaneados                                              |
-| `requirements/document_intelligence.txt` | Parsing de PDF, layout documental e extração estruturada                              |
-| `requirements/data_engineering.txt`      | SQL, ORM, migrations e pipelines de dados                                             |
-| `requirements/big_data.txt`              | Big Data e experimentos com processamento distribuído                                 |
-| `requirements/mlops.txt`                 | Rastreamento, deploy e ciclo de vida de modelos                                       |
-| `requirements/time_series.txt`           | Séries temporais e previsão                                                           |
-| `requirements/geospatial.txt`            | Mapas, dados geoespaciais e inteligência territorial                                  |
-| `requirements/optimization.txt`          | Pesquisa operacional e otimização matemática                                          |
-| `requirements/simulation.txt`            | Simulação de eventos discretos e experimentos estocásticos                            |
-| `requirements/automation.txt`            | Automação de workflows e orquestração de tarefas                                      |
-| `requirements/support.txt`               | Automação de suporte/helpdesk e diagnóstico de máquinas                               |
-| `requirements/networking.txt`            | Diagnóstico de rede, DNS, SSH, sockets e varredura                                    |
-| `requirements/cloud.txt`                 | Experimentos com SDKs da AWS, Google Cloud e Azure                                    |
-| `requirements/devops.txt`                | Automação de infraestrutura e ferramentas de deploy                                   |
-| `requirements/observability.txt`         | Logs, métricas, traces e monitoramento                                                |
-| `requirements/messaging.txt`             | Filas, workers e processamento assíncrono                                             |
-| `requirements/distributed_system.txt`    | Experimentos com sistemas distribuídos e coordenação de serviços                      |
-| `requirements/iot.txt`                   | IoT e comunicação com hardware                                                        |
-| `requirements/security.txt`              | Criptografia, autenticação e utilitários de segurança                                 |
+- [Atlas Core](docs/tracks/core/README.pt-BR.md)
+- [Atlas API](docs/tracks/api/README.pt-BR.md)
+- [Legado e Refatoração](docs/tracks/legacy-refactoring/README.pt-BR.md)
 
-Uso recomendado:
+### Dados, matemática e inteligência
+
+- [Data Mining](docs/tracks/data-mining/README.pt-BR.md)
+- [ETL e Engenharia de Dados](docs/tracks/data-engineering/README.pt-BR.md)
+- [Statistical Lab](docs/tracks/statistics/README.pt-BR.md)
+- [Cálculo e Métodos Numéricos](docs/tracks/numerical-methods/README.pt-BR.md)
+- [Machine Learning](docs/tracks/machine-learning/README.pt-BR.md)
+- [Deep Learning](docs/tracks/deep-learning/README.pt-BR.md)
+- [AI Lab](docs/tracks/ai/README.pt-BR.md)
+- [BI e Storytelling](docs/tracks/bi-storytelling/README.pt-BR.md)
+
+### Operações e sistemas em execução
+
+- [Automação](docs/tracks/automation/README.pt-BR.md)
+- [Suporte](docs/tracks/support/README.pt-BR.md)
+- [Redes](docs/tracks/networking/README.pt-BR.md)
+- [Mensageria e Tempo Real](docs/tracks/messaging-real-time/README.pt-BR.md)
+- [Cloud e DevOps](docs/tracks/cloud-devops/README.pt-BR.md)
+- [Observabilidade](docs/tracks/observability/README.pt-BR.md)
+- [Sistemas](docs/tracks/systems/README.pt-BR.md)
+
+### Dispositivos e aplicações interativas
+
+- [Mobile](docs/tracks/mobile/README.pt-BR.md)
+- [Embarcados, IoT e Sistemas Autônomos](docs/tracks/embedded-iot-autonomous/README.pt-BR.md)
+- [Jogos e Simulação](docs/tracks/games-simulation/README.pt-BR.md)
+
+Veja o [catálogo completo](docs/tracks/README.pt-BR.md) para definições de
+status e navegação.
+
+## Módulos do sistema
+
+O catálogo de módulos documenta unidades concretas de runtime e especificações
+de produto. A documentação atual inclui:
+
+- [Backend Atlas](backend/README.pt-BR.md)
+- [Pacote da aplicação](backend/app/README.pt-BR.md)
+- [Interface de API](backend/app/api/README.pt-BR.md)
+- [Rotas da API](backend/app/api/routes/README.pt-BR.md)
+- [Configuração core](backend/app/core/README.pt-BR.md)
+- [Modelo de domínio](backend/app/domain/README.pt-BR.md)
+- [Entidades de domínio](backend/app/domain/entities/README.pt-BR.md)
+- [Casos de uso](backend/app/use_cases/README.pt-BR.md)
+- [Testes do backend](backend/tests/README.pt-BR.md)
+- [Analytics](analytics/README.pt-BR.md)
+- [Aplicações clientes](apps/README.pt-BR.md)
+- [Implementação do Atlas Pocket](apps/mobile/README.pt-BR.md)
+- [Datasets](datasets/README.pt-BR.md)
+- [Infraestrutura](infra/README.pt-BR.md)
+- [Notebooks](notebooks/README.pt-BR.md)
+- [Coleta de dados](scrapers/README.pt-BR.md)
+- [Scripts operacionais](scripts/README.pt-BR.md)
+- [Scripts de automação mobile](scripts/mobile/README.pt-BR.md)
+- [Atlas Mobile Lab](docs/modules/mobile-lab/README.pt-BR.md)
+
+O [catálogo de módulos](docs/modules/README.pt-BR.md) diferencia módulos
+implementados, scaffolds parciais e produtos planejados.
+
+## Estratégia de dependências
+
+O Atlas não usa um único `requirements.txt` experimental gigantesco. A pasta
+[`requirements/`](requirements/README.pt-BR.md) contém conjuntos focados e sem
+pinagem para exploração técnica, enquanto
+[`backend/requirements.txt`](backend/requirements.txt) fixa o ambiente atual do
+backend.
+
+Instale somente os conjuntos necessários ao trabalho atual:
 
 ```bash
-# Comece pela trilha mínima/base
-pip install -r requirements/core.txt
-pip install -r requirements/dev.txt
-
-# Adicione apenas a trilha que estiver estudando no momento
-pip install -r requirements/statistics.txt
-pip install -r requirements/scraping.txt
-pip install -r requirements/support.txt
+python -m pip install -r requirements/core.txt
+python -m pip install -r requirements/dev.txt
 ```
 
-Algumas trilhas podem exigir dependências externas do sistema operacional. Por exemplo, OCR, automação de navegador, bibliotecas geoespaciais e frameworks de deep learning podem exigir pacotes do sistema, drivers ou download de modelos.
+Combine trilhas explicitamente quando um módulo atravessar domínios:
 
----
-
-## Módulos Principais
-
-### Atlas Core
-
-A fundação de domínio do sistema.
-
-Responsabilidades planejadas:
-
-* entidades
-* objetos de valor
-* casos de uso
-* interfaces de repositório
-* eventos de domínio
-* regras de negócio
-* lógica pura em Python
-
-Exemplos de entidades futuras:
-
-* `DataSource`
-* `Dataset`
-* `Pipeline`
-* `PipelineRun`
-* `Experiment`
-* `ModelRun`
-* `StatisticalTest`
-* `Agent`
-* `Workflow`
-* `Report`
-* `SupportCheck`
-* `NetworkProbe`
-
----
-
-### Atlas API
-
-A camada HTTP do projeto.
-
-Responsabilidades planejadas:
-
-* rotas FastAPI
-* schemas de requisição e resposta
-* injeção de dependências
-* experimentos com autenticação
-* documentação automática da API
-* integração com casos de uso do domínio
-
-Endpoints iniciais:
-
-```text
-GET /health
-GET /version
+```bash
+python -m pip install \
+  -r requirements/data.txt \
+  -r requirements/statistics.txt \
+  -r requirements/visualization.txt
 ```
 
----
+Restrições importantes:
 
-### Atlas Data Mining
+- arquivos de trilha não são lock files;
+- stacks experimentais podem conflitar e exigir ambientes separados;
+- bibliotecas nativas, cloud, device ou IA podem exigir setup e custos externos;
+- listar uma dependência não prova que sua funcionalidade está implementada;
+- módulos devem declarar exatamente quais trilhas consomem.
 
-Responsável por coleta de dados e inteligência web.
+## Início rápido
 
-Essa área inclui:
+### Pré-requisitos
 
-* **Atlas Web Scraping Lab**
-* **Atlas OCR Lab**
-* **Atlas Document Intelligence Lab**
+- Git;
+- Python 3.11 ou mais recente;
+- Docker com suporte a Compose;
+- PowerShell, Bash ou shell equivalente.
 
-Tópicos planejados:
-
-* coleta de dados via APIs
-* parsing de HTML
-* scraping assíncrono
-* automação de navegador
-* práticas responsáveis de scraping
-* OCR para documentos escaneados
-* extração de PDFs e análise de layout
-* chunking de documentos para RAG
-* coleta de dados públicos
-
-Casos de uso possíveis:
-
-* monitoramento de concursos públicos e editais
-* bases governamentais
-* DATASUS e dados de saúde pública
-* informações acadêmicas da UFBA
-* relatórios públicos, decretos, portarias, editais e PDFs
-* radar de tendências tecnológicas
-
----
-
-### Atlas ETL e Engenharia de Dados
-
-Responsável por transformar dados brutos em dados utilizáveis.
-
-Tópicos planejados:
-
-* extração
-* limpeza
-* validação
-* transformação
-* carga no PostgreSQL
-* verificações de qualidade de dados
-* cargas incrementais
-* logs de pipeline
-* experimentos com versionamento de dados
-* armazenamento analítico com DuckDB
-* ORM e migrations com SQLAlchemy, SQLModel e Alembic
-
-Fluxo geral:
-
-```text
-Fonte Externa
-    ↓
-Extractor
-    ↓
-Dado Bruto
-    ↓
-Validator
-    ↓
-Transformer
-    ↓
-PostgreSQL / DuckDB
-    ↓
-Analytics / ML / RAG
-    ↓
-API / Dashboard / Relatório
-```
-
----
-
-### Atlas Statistical Lab
-
-Módulo focado em conectar estatística acadêmica com software real.
-
-Tópicos planejados:
-
-* estatística descritiva
-* distribuições de probabilidade
-* amostragem
-* simulação Monte Carlo
-* bootstrap
-* intervalos de confiança
-* testes de hipótese
-* regressão linear
-* diagnóstico de regressão
-* modelagem Bayesiana
-* experimentos com séries temporais
-* métodos numéricos
-* fundamentos de cálculo aplicados à otimização
-
-A ideia é implementar conceitos estatísticos em Python antes de esconder tudo atrás de bibliotecas de alto nível.
-
----
-
-### Atlas Machine Learning Lab
-
-Módulo para machine learning clássico e experimentação supervisionada/não supervisionada.
-
-Tópicos planejados:
-
-* regressão linear
-* regressão logística
-* KNN
-* árvores de decisão
-* Random Forest
-* Gradient Boosting
-* clustering
-* PCA
-* validação cruzada
-* métricas de avaliação
-* engenharia de atributos
-* experimentos reprodutíveis
-* comparação entre implementações manuais e modelos de bibliotecas consolidadas
-
----
-
-### Atlas Deep Learning Lab
-
-Módulo dedicado ao estudo e implementação de redes neurais profundas, conectando fundamentos matemáticos, estatística, otimização e aplicações modernas de IA.
-
-Tópicos planejados:
-
-* redes neurais artificiais do zero
-* perceptron e multilayer perceptron, ou MLP
-* funções de ativação
-* funções de perda
-* gradiente descendente
-* backpropagation
-* regularização
-* dropout
-* batch normalization
-* otimizadores como SGD, RMSProp e Adam
-* Convolutional Neural Networks, ou CNNs
-* Recurrent Neural Networks, LSTM e GRU
-* autoencoders
-* embeddings
-* modelos de NLP
-* mecanismo de atenção
-* Transformers
-* fine-tuning de modelos pré-treinados
-* experimentos com PyTorch
-* experimentos com TensorFlow e Keras
-
-Esse módulo deve evitar tratar redes neurais como caixas-pretas. A ideia é primeiro estudar os fundamentos, implementar versões simples e só depois usar frameworks modernos com mais consciência técnica.
-
----
-
-### Atlas AI Lab
-
-Módulo para IA generativa, RAG e sistemas baseados em agentes.
-
-Tópicos planejados:
-
-* integrações com LLMs
-* Ollama para modelos locais
-* Replicate e modelos em nuvem
-* embeddings
-* busca vetorial
-* pipelines RAG
-* agentes de IA
-* workflows multiagentes
-* avaliação de prompts
-* guardrails
-* tool calling
-* experimentos com memória
-* estratégias de fallback entre modelos
-
-Fluxo futuro possível:
-
-```text
-Usuário
- ↓
-Chat / API / WhatsApp
- ↓
-Agent Router
- ↓
-Retriever
- ↓
-Tool Executor
- ↓
-LLM Provider
- ↓
-Response Validator
- ↓
-Resposta + Logs + Métricas
-```
-
----
-
-### Atlas Automation Lab
-
-Módulo para automação de workflows e integrações externas.
-
-Tópicos planejados:
-
-* workflows com n8n
-* tarefas agendadas
-* workflows orientados a eventos
-* alertas por e-mail
-* integração com WhatsApp
-* automação de social media
-* relatórios automáticos
-* automação de portfólio
-* automações acadêmicas
-
-Fluxo de exemplo:
-
-```text
-Novo dado coletado
-    ↓
-Pipeline processa o dado
-    ↓
-IA resume os achados
-    ↓
-Módulo estatístico valida padrões
-    ↓
-Dashboard é atualizado
-    ↓
-Automação envia relatório ou alerta
-```
-
----
-
-### Atlas Support Lab
-
-Módulo inspirado em trabalho real de suporte/helpdesk.
-
-Tópicos planejados:
-
-* diagnóstico de máquinas
-* relatórios de CPU, RAM e disco
-* inspeção de processos e serviços
-* experimentos de automação Windows
-* inventário via WMI
-* relatórios de suporte em Markdown ou HTML
-* scripts portáteis de diagnóstico
-* health checks para estações de trabalho
-
-Casos de uso possíveis:
-
-* gerar relatório diagnóstico local da máquina
-* verificar CPU, RAM, disco e informações de rede
-* criar checklist de suporte para máquinas Windows
-* coletar dados básicos de inventário para troubleshooting
-
----
-
-### Atlas Networking Lab
-
-Módulo para diagnóstico de rede e experimentos de infraestrutura.
-
-Tópicos planejados:
-
-* testes de ping e latência
-* resolução DNS
-* inspeção de interfaces de rede
-* automação SSH
-* varredura de rede local
-* sockets
-* experimentos TCP e UDP
-* teste de banda
-* health checks de APIs e endpoints
-
-Casos de uso possíveis:
-
-* testar DNS, gateway e conectividade com a internet
-* diagnosticar latência e perda de pacotes
-* escanear hosts alcançáveis em uma rede local
-* monitorar endpoints internos
-
----
-
-### Atlas Messaging Lab
-
-Módulo para filas, workers e processamento assíncrono.
-
-Tópicos planejados:
-
-* filas com Redis
-* experimentos com RabbitMQ
-* workers com Celery
-* jobs em segundo plano
-* políticas de retry
-* workflows orientados a eventos
-* processamento assíncrono de tarefas
-
-Casos de uso possíveis:
-
-* processar jobs de scraping em segundo plano
-* enfileirar tarefas de extração documental
-* enviar geração de relatórios para workers
-* conectar eventos de automação a pipelines
-
----
-
-### Atlas Cloud, DevOps e Observability
-
-A fundação operacional do projeto.
-
-Tópicos planejados:
-
-* Docker
-* Docker Compose
-* PostgreSQL
-* experimentos com Redis
-* GitHub Actions
-* deploy em cloud
-* experimentos com SDKs da AWS, Google Cloud e Azure
-* automação de infraestrutura
-* logs
-* métricas
-* traces
-* health checks
-* monitoramento
-* backups
-* experimentos com deploy zero-downtime
-
----
-
-### Atlas Systems Lab
-
-Módulo para conhecimento de mais baixo nível em sistemas.
-
-Tópicos planejados:
-
-* fundamentos de Linux
-* processos e threads
-* programação assíncrona
-* sockets
-* experimentos TCP/UDP
-* comunicação P2P
-* sistemas distribuídos
-* fundamentos de criptografia
-* problemas de concorrência
-* tolerância a falhas
-* testes de carga
-* experimentos com IoT
-
----
-
-### Atlas Web
-
-Futura interface React para dashboards, storytelling e apresentação de portfólio.
-
-Funcionalidades planejadas:
-
-* landing page
-* mapa interativo do projeto
-* dashboards de dados
-* visualizações estatísticas
-* monitoramento de pipelines
-* histórico de experimentos
-* playground de RAG
-* dashboard de diagnósticos de suporte
-* interface gamificada de aprendizado
-
----
-
-### Atlas Mobile
-
-Futura aplicação Android construída com Kotlin.
-
-Funcionalidades planejadas:
-
-* acesso offline-first
-* cache local com Room/SQLite
-* sincronização com API
-* notificações
-* dashboards simplificados
-* acesso a chatbot
-* experimentos de coleta mobile de dados
-* acesso a checklist de suporte
-* experimentos de diagnóstico em campo
-
----
-
-### Atlas Legacy Lab
-
-Módulo futuro para praticar manutenção e modernização de sistemas legados.
-
-Tópicos planejados:
-
-* scripts legados bagunçados
-* testes de caracterização
-* refatoração
-* adapters
-* Strangler Fig Pattern
-* documentação de dívida técnica
-
-Esse módulo existe porque software real raramente chega limpo, documentado e emocionalmente disponível.
-
----
-
-## Stack Tecnológica
-
-### Atual / Inicial
-
-* Python
-* FastAPI
-* PostgreSQL
-* SQLAlchemy ou SQLModel
-* Pydantic
-* Docker
-* Docker Compose
-* pytest
-* Git e GitHub
-
-### Planejada / Experimental
-
-* NumPy
-* Pandas
-* Polars
-* PyArrow
-* DuckDB
-* OpenPyXL
-* scikit-learn
-* statsmodels
-* PyMC
-* PyTorch
-* TensorFlow / Keras
-* ecossistema Hugging Face
-* LangChain / LangGraph
-* Flowise
-* Ollama
-* Replicate
-* ChromaDB, Qdrant, FAISS ou PGVector
-* BeautifulSoup, Scrapy, Playwright e Selenium
-* PyMuPDF, pdfplumber, Unstructured e LayoutParser
-* pytesseract e EasyOCR
-* experimentos com Redis, Celery e RabbitMQ
-* psutil, WMI e ferramentas de automação de suporte
-* ferramentas de rede como dnspython, scapy, paramiko e utilitários de ping
-* boto3, SDKs do Google Cloud e SDKs do Azure
-* Grafana, Prometheus e OpenTelemetry
-* React e TypeScript
-* Kotlin Android e Room / SQLite
-* n8n
-
----
-
-## Roadmap
-
-### Fase 0: Fundação
-
-* [ ] Organizar a estrutura do backend
-* [ ] Criar endpoint `/health`
-* [ ] Criar endpoint `/version`
-* [ ] Conectar FastAPI ao PostgreSQL
-* [ ] Adicionar testes básicos
-* [ ] Adicionar documentação inicial
-* [ ] Criar o primeiro ADR
-
-### Fase 1: Atlas Core
-
-* [ ] Criar entidades de domínio
-* [ ] Criar casos de uso
-* [ ] Criar interfaces de repositório
-* [ ] Adicionar testes unitários
-* [ ] Documentar decisões de domínio
-
-### Fase 2: Data Mining, Scraping e ETL
-
-* [ ] Criar a primeira fonte de dados
-* [ ] Construir o primeiro scraper
-* [ ] Armazenar dados brutos
-* [ ] Validar dados coletados
-* [ ] Transformar e carregar dados no PostgreSQL
-* [ ] Expor dados pela API
-
-### Fase 3: OCR e Document Intelligence
-
-* [ ] Extrair texto de PDFs
-* [ ] Extrair texto de imagens escaneadas
-* [ ] Estruturar seções de documentos
-* [ ] Preparar chunks para RAG
-* [ ] Construir um pequeno protótipo de perguntas e respostas sobre documentos
-
-### Fase 4: Statistical Lab
-
-* [ ] Adicionar módulo de estatística descritiva
-* [ ] Adicionar simulações de probabilidade
-* [ ] Adicionar experimentos de amostragem
-* [ ] Adicionar exemplos de intervalo de confiança
-* [ ] Adicionar exemplos de testes de hipótese
-* [ ] Adicionar experimentos de regressão
-* [ ] Adicionar experimentos de modelagem Bayesiana
-
-### Fase 5: Machine Learning
-
-* [ ] Adicionar experimentos iniciais de ML
-* [ ] Adicionar métricas de avaliação de modelos
-* [ ] Adicionar rastreamento simples e reprodutível de experimentos
-* [ ] Comparar implementações manuais com modelos baseados em bibliotecas
-
-### Fase 6: Deep Learning
-
-* [ ] Implementar uma rede neural simples do zero
-* [ ] Implementar gradiente descendente e backpropagation em exemplo didático
-* [ ] Criar experimento de MLP com PyTorch
-* [ ] Criar experimento de classificação de texto
-* [ ] Criar experimento inicial com embeddings
-* [ ] Comparar um modelo clássico com uma rede neural no mesmo problema
-
-### Fase 7: IA, RAG e Agentes
-
-* [ ] Adicionar embeddings
-* [ ] Criar um protótipo de RAG
-* [ ] Integrar um modelo local com Ollama
-* [ ] Adicionar ferramentas baseadas em agentes
-* [ ] Adicionar avaliação de respostas e logging
-
-### Fase 8: Suporte e Redes
-
-* [ ] Criar script de diagnóstico de máquina
-* [ ] Gerar relatório de suporte em Markdown ou HTML
-* [ ] Adicionar verificações de DNS e latência
-* [ ] Adicionar health checks de endpoints
-* [ ] Adicionar experimentos simples de inventário de rede
-
-### Fase 9: Automação e Mensageria
-
-* [ ] Adicionar workflows com n8n
-* [ ] Adicionar alertas
-* [ ] Automatizar relatórios
-* [ ] Adicionar experimento com fila/worker
-* [ ] Criar experimentos de integração com WhatsApp ou e-mail
-
-### Fase 10: Web, Storytelling e Portfólio
-
-* [ ] Construir dashboard React
-* [ ] Adicionar relatórios visuais
-* [ ] Criar mapa visual do portfólio
-* [ ] Adicionar visualizações estatísticas
-* [ ] Adicionar dashboards de suporte/rede
-
-### Fase 11: Cloud, DevOps e Observabilidade
-
-* [ ] Adicionar pipeline de CI/CD
-* [ ] Criar ambiente de deploy
-* [ ] Adicionar logs estruturados
-* [ ] Adicionar métricas e traces
-* [ ] Adicionar monitoramento
-* [ ] Adicionar testes de carga
-
-### Fase 12: Sistemas, Segurança e Experimentos Distribuídos
-
-* [ ] Adicionar experimentos com sockets
-* [ ] Adicionar protótipos de sistemas distribuídos
-* [ ] Adicionar exemplos de criptografia
-* [ ] Adicionar experimentos com IoT
-* [ ] Adicionar experimentos de caos/resiliência quando a fundação estiver madura
-
----
-
-## Rodando Localmente
-
-Esta seção será expandida conforme a fundação do projeto for implementada.
-
-Fluxo futuro esperado:
+### 1. Clonar e entrar no repositório
 
 ```bash
 git clone https://github.com/caio-stat/atlas.git
 cd atlas
-
-python -m venv .venv
 ```
 
-Linux/macOS:
+### 2. Criar e ativar um ambiente virtual
+
+PowerShell:
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+Bash:
 
 ```bash
+python -m venv .venv
 source .venv/bin/activate
 ```
 
-Windows PowerShell:
-
-```powershell
-.venv\Scripts\Activate.ps1
-```
-
-Instale apenas as trilhas necessárias para a tarefa atual:
+### 3. Instalar o ambiente do backend
 
 ```bash
-pip install -r requirements/core.txt
-pip install -r requirements/dev.txt
+python -m pip install --upgrade pip
+python -m pip install -r backend/requirements.txt
 ```
 
-Exemplo para uma trilha específica de estudo:
+### 4. Iniciar o PostgreSQL
 
 ```bash
-pip install -r requirements/statistics.txt
+docker compose up -d postgres
+docker compose ps
 ```
 
-Fluxo futuro com Docker:
+As credenciais do Compose são defaults de desenvolvimento local. Nunca as
+reutilize em ambiente compartilhado ou de produção.
 
-```bash
-docker compose up -d
-```
-
-Comando futuro do backend:
+### 5. Executar os testes
 
 ```bash
 cd backend
-uvicorn main:app --reload
+python -m pytest
 ```
 
-Comando futuro de testes:
+### 6. Iniciar a API
 
 ```bash
-pytest
+python -m uvicorn app.main:app --reload
 ```
 
----
+Abra `http://127.0.0.1:8000/docs` para a interface OpenAPI. Consulte o
+[guia do backend](backend/README.pt-BR.md) para arquitetura, limitações de
+configuração e próximos passos.
 
-## Estratégia de Aprendizado
+## Comportamento da API
 
-O Atlas foi projetado para crescer por ciclos pequenos e documentados.
+| Método | Path | Resposta atual | Significado |
+|---|---|---|---|
+| `GET` | `/` | `{"message":"Atlas conectado"}` | Resposta básica do processo |
+| `GET` | `/health` | `{"status":"ok"}` | Apenas liveness do processo |
+| `GET` | `/version` | `{"name":"Atlas API","version":"0.1.0"}` | Identidade atual da API |
 
-Cada ciclo deve produzir:
+`/health` não verifica PostgreSQL ou outras dependências. Um futuro endpoint de
+readiness deve representar separadamente a disponibilidade das dependências.
 
-* código funcionando
-* testes
-* documentação
-* uma decisão arquitetural clara
-* uma explicação adequada para portfólio
-* conexão com dados, estatística, IA, infraestrutura ou engenharia de software
+## Fluxo de desenvolvimento
 
-O projeto não deve tentar ficar completo de uma vez. Ele deve evoluir como software real: de forma incremental, com algum sofrimento inevitável e menos ilusões a cada semana.
+1. Escolha uma trilha documentada e um critério de aceitação pequeno.
+2. Confirme o estado real do repositório antes de desenhar abstrações.
+3. Adicione ou atualize testes para comportamento observável.
+4. Implemente a menor fatia vertical que satisfaça o critério.
+5. Mantenha regras de domínio separadas de entrega e infraestrutura.
+6. Execute testes focados e depois a suíte relevante mais ampla.
+7. Atualize documentação em inglês e português na mesma alteração.
+8. Registre ADR quando a decisão atravessar fronteiras ou for cara de reverter.
+9. Revise segurança, privacidade, falhas e evidências operacionais.
 
----
+Definição de pronto para uma mudança de módulo:
 
-## Valor para Portfólio
+- instruções de setup limpo funcionam;
+- contratos públicos e erros estão documentados;
+- testes são proporcionais ao risco;
+- nenhum secret ou dado pessoal é versionado;
+- comportamento planejado e implementado estão separados;
+- READMEs de trilhas e módulos permanecem alinhados.
 
-O Atlas tem como objetivo demonstrar a capacidade de:
+## Testes e qualidade
 
-* projetar sistemas modulares
-* construir APIs
-* trabalhar com bancos de dados
-* coletar e processar dados
-* aplicar estatística a problemas reais
-* construir experimentos de machine learning
-* estudar e implementar modelos de deep learning
-* usar IA generativa de forma responsável
-* automatizar workflows
-* construir ferramentas de diagnóstico para suporte e redes
-* organizar experimentos de cloud, DevOps e observabilidade
-* documentar decisões técnicas
-* pensar em escalabilidade, resiliência e manutenibilidade
+O projeto usa pytest para as checagens atuais do backend. Com o crescimento da
+arquitetura, a qualidade deve ser organizada em camadas:
 
----
+| Camada | Finalidade |
+|---|---|
+| Unitária | Invariantes, cálculos, transformações e decisões de casos de uso |
+| Contrato | Schemas HTTP, status, erros, eventos, arquivos e provedores |
+| Integração | PostgreSQL, migrações, filas, arquivos e provedores controlados |
+| Ponta a ponta | Poucas jornadas críticas atravessando fronteiras reais |
+| Arquitetura | Direção de dependências e imports proibidos de frameworks |
+| Operacional | Saúde, readiness, telemetria, rollback e recuperação |
+
+Qualidade não é medida apenas por percentual de cobertura. Testes devem detectar
+regressões relevantes, permanecer determinísticos e explicar falhas. Experimentos
+de dados e IA também precisam de entradas e seeds versionadas, métricas de
+avaliação, comparação com baselines e registro de limitações.
+
+## Sistema de documentação
+
+A [central de documentação](docs/README.pt-BR.md) define tipos de documentos,
+regras de fonte da verdade, política bilíngue, padrão de escrita e checklist de
+revisão.
+
+A documentação principal é mantida em pares:
+
+- `README.md` — inglês;
+- `README.pt-BR.md` — português brasileiro.
+
+As duas versões devem possuir estrutura e sentido técnico equivalentes. Nomes
+técnicos permanecem canônicos e as explicações são localizadas. Trabalho
+planejado deve ser marcado claramente; afirmações de implementação devem apontar
+para código, testes, exemplos ou evidência operacional.
+
+## Roadmap
+
+### Fase 0 — Fundação
+
+- estabilizar setup e testes do backend;
+- completar configuração tipada;
+- extrair routers versionados;
+- completar o ADR 0001;
+- implementar a primeira fatia de domínio.
+
+### Fase 1 — Fundação de dados
+
+- registrar e catalogar fontes de dados;
+- adicionar migrações e adapters de repository;
+- coletar um dataset público de forma responsável;
+- criar pipeline reprodutível de raw para processed;
+- publicar evidências de qualidade e linhagem.
+
+### Fase 2 — Analytics e estatística
+
+- definir um dicionário de métricas;
+- publicar análises exploratórias e inferenciais;
+- adicionar regressão, Bayes ou séries temporais;
+- produzir relatório e dashboard reprodutíveis.
+
+### Fase 3 — Machine learning
+
+- estabelecer baselines estatísticos e ingênuos;
+- construir um pipeline sem leakage;
+- rastrear experimentos e produzir model card;
+- expor inferência aprovada por adapter estável.
+
+### Fase 4 — IA e documentos
+
+- ingerir documentos com proveniência;
+- construir recuperação com citações;
+- definir dataset de avaliação;
+- adicionar ferramentas controladas por políticas e agentes observáveis.
+
+### Fase 5 — Automação e operações
+
+- adicionar workflows agendados e orientados a eventos;
+- introduzir logs estruturados, métricas e correlation IDs;
+- escrever runbooks para falhas relevantes;
+- testar retry, idempotência, rollback e recuperação.
+
+### Fase 6 — Interfaces e edge
+
+- criar a primeira tela de saúde do Atlas Pocket;
+- adicionar comportamento offline-first de forma incremental;
+- prototipar clientes de suporte, IoT ou simulação;
+- medir restrições de dispositivo, rede e recursos.
+
+### Fase 7 — Distribuição seletiva
+
+- medir gargalos no monólito modular;
+- extrair worker ou serviço somente quando justificado;
+- preservar contratos, observabilidade e rollback;
+- documentar a decisão e as evidências de migração.
+
+## Uso responsável
+
+### Dados e coleta
+
+- respeitar termos da fonte, robots, rate limits e legislação aplicável;
+- coletar apenas o mínimo necessário para a finalidade declarada;
+- registrar proveniência, timestamps, transformações e regras de exclusão;
+- nunca publicar dados privados, pessoais ou sensíveis no portfólio.
+
+### IA e automação
+
+- identificar conteúdo gerado por modelos e preservar rastreabilidade de fontes;
+- avaliar recuperação e respostas antes de confiar nelas;
+- conceder às ferramentas o menor privilégio necessário;
+- exigir aprovação explícita para ações destrutivas ou com efeito externo;
+- acompanhar custo, latência, fallback e regras de dados dos provedores.
+
+### Suporte, redes e dispositivos
+
+- usar diagnóstico somente leitura por padrão;
+- definir escopo e autorização antes de varredura ou acesso remoto;
+- separar evidência, inferência e correção;
+- registrar mudanças e oferecer rollback quando houver modificação;
+- tratar ações físicas e industriais como sensíveis à segurança.
+
+### Segurança
+
+- nunca versionar secrets ou credenciais de produção;
+- validar entrada não confiável nas fronteiras;
+- remover dados sensíveis de logs e erros;
+- usar menor privilégio e timeouts explícitos;
+- manter dependências e procedimentos de deploy revisáveis.
+
+## Evidências de portfólio
+
+Cada fatia concluída do Atlas deve responder:
+
+- Qual problema real foi tratado?
+- Quais restrições e tradeoffs orientaram o design?
+- Qual contrato a separa de outros módulos?
+- Como outra pessoa pode executar e verificar o resultado?
+- Quais testes, métricas ou comparações sustentam a conclusão?
+- O que falhou, mudou ou continua limitado?
+- O que justificaria o próximo passo arquitetural?
+
+Boas evidências incluem código, testes, diagramas, ADRs, dataset cards, model
+cards, benchmarks, screenshots, dashboards, runbooks e demos curtas. O objetivo
+não é amplitude máxima, mas progressão técnica confiável.
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT.
-
----
+O Atlas é licenciado sob a [Licença MIT](LICENSE).
 
 ## Autor
 
-Desenvolvido por **Caio Costa Cavalcante** como portfólio técnico de longo prazo e laboratório de aprendizado em Dados, IA, Estatística, Automação, Infraestrutura e Engenharia de Software.
+**Caio Costa Cavalcante**
+
+Estudante de Estatística, estudante de ciência de dados, desenvolvedor de IA e
+Python, desenvolvedor Android e profissional de suporte/helpdesk construindo o
+Atlas como portfólio técnico de longo prazo.
+
+GitHub: [caio-stat](https://github.com/caio-stat)

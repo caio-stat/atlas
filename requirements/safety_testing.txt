@@ -12,7 +12,6 @@ mypy
 bandit
 
 # Property-based testing and validation
-hypothesis
 pydantic
 
 # Logs and reports

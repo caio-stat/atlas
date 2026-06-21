@@ -1,0 +1,4 @@
+# Umbrella track intentionally kept dependency-free.
+# Install one or more focused tracks instead:
+# ml.txt, deep_learning.txt, nlp.txt, computer_vision.txt,
+# generative_ai.txt, agents.txt, or autonomous_systems.txt.
