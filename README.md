@@ -16,6 +16,7 @@
 - [Overview](#overview)
 - [Current status](#current-status)
 - [Vision and goals](#vision-and-goals)
+- [Human experience and interaction](#human-experience-and-interaction)
 - [Architecture](#architecture)
 - [Repository map](#repository-map)
 - [Technical tracks](#technical-tracks)
@@ -118,6 +119,119 @@ Project goals:
   transparency, fairness, and social awareness;
 - study how perception, identity, habit, ethics, community, and narrative
   shape user behavior, trust, and wellbeing.
+
+## Human experience and interaction
+
+Atlas should be technically rigorous and humanly inhabitable. Experience is not a cosmetic layer applied after backends, models, and automations are finished; it is a cross-cutting property of contracts, messages, response times, navigation patterns, documentation, data policies, help mechanisms, and opportunities for contestation. A correct system that produces avoidable anxiety, confusion, shame, a sense of surveillance, or loss of control is still incomplete.
+
+The intended human outcome is for each person to feel **welcomed without being infantilized, guided without being controlled, stimulated without being overloaded, and respected without having to earn that respect**. Atlas should awaken curiosity, exploratory pleasure, calibrated trust, and a desire to keep interacting because the interaction delivers value, responds clearly, and recognizes user autonomy—never because it exploits compulsion, fear of loss, guilt, or vulnerability.
+
+### Desired affective and cognitive qualities
+
+- **Welcome:** the first interaction should communicate “you can start here.” Language, examples, and defaults should reduce threat, anticipate questions, and make it safe to admit a lack of knowledge.
+- **Pleasantness:** legibility, rhythm, visual coherence, timely responses, restrained microinteractions, and humane messages should create comfort without concealing relevant complexity.
+- **Curiosity:** the system should offer cues, examples, previews, useful questions, and progressive paths that invite exploration without turning discovery into a confusing search for features.
+- **Competence:** each action should produce feedback that helps people understand what happened, why it happened, and what next step is possible. Users should perceive genuine growth in mastery.
+- **Autonomy:** recommendations must remain recommendations. Alternatives, consequences, reversal, export, cancellation, and exit should remain visible and practical.
+- **Belonging:** cultural, linguistic, cognitive, sensory, and technical differences should be treated as a normal part of the audience, not inconvenient exceptions.
+- **Calibrated trust:** Atlas should acknowledge uncertainty, limitations, sources, failures, and the real implementation state. Emotional safety must not be confused with false certainty.
+- **Reflective stimulation:** beyond completing tasks, the system may invite users to compare hypotheses, revisit decisions, understand tradeoffs, and perceive relationships among technology, society, and consequence.
+- **Recovery:** errors should be reversible whenever possible. After failure, interruption, or overload, the system should provide a short path back while preserving context and completed work.
+
+### Psychology applied to experience
+
+Atlas may draw from a broad psychological repertoire, provided that each mechanism has an explicit purpose, proportionate evidence, and safeguards:
+
+- **Behaviorism and learning:** reinforcement, modeling, shaping, immediate feedback, deliberate practice, active recall, spaced repetition, and habit formation can support learning and continuity. They must not create opaque variable rewards, punishment for absence, coercive streaks, or behavioral dependency.
+- **Gestalt and perceptual psychology:** proximity, similarity, continuity, closure, common fate, and figure-ground should guide hierarchy, grouping, and focus. Contrast, salience, and movement should highlight relevance rather than hijack attention.
+- **Cognitivism:** intrinsic, extraneous, and germane load; working memory; chunking; recognition over recall; mental models; dual coding; selective attention; and metacognition should ground information architecture. Complexity should be disclosed progressively without hiding consequences.
+- **Constructivism and cultural-historical theory:** examples, scaffolding, the zone of proximal development, shared language, and situated learning should let beginners advance with support and experts remove that support without friction.
+- **Humanism:** congruence, positive regard, listening, empathy, and the tendency toward actualization inspire messages that preserve dignity. An error belongs to the interaction and learning process; it is not a moral defect in the user.
+- **Phenomenological and existential psychologies:** lived experience, ambiguity, responsibility, choice, and meaning-making matter as much as completion rates. The system should return agency rather than reduce a person to telemetry events.
+- **Psychoanalyses and depth psychology:** desire, resistance, projection, repetition, idealization, shadow, fantasy, and defense mechanisms can support a critical reading of relationships between users and technology. They are interpretive and artistic lenses, never remote diagnoses.
+- **Social psychology:** reciprocity, social proof, authority, conformity, comparison, group identity, stigma, the bystander effect, diffusion of responsibility, and stereotype threat help predict how interfaces shape conduct. These phenomena should be made legible, not silently exploited.
+- **Self-determination theory:** autonomy, competence, and relatedness should sustain intrinsic motivation. Goals, indicators, and celebrations are healthy only when they help users recognize progress they themselves value.
+- **Decision science:** framing, anchoring, availability, loss aversion, sunk costs, overconfidence, temporal discounting, and decision fatigue require safe defaults, honest comparisons, and comprehensible consequences.
+- **Positive psychology and wellbeing:** curiosity, realistic hope, character strengths, gratitude, flow, and meaning can enrich the experience, provided that they do not become toxic positivity or conceal structural problems.
+- **Ecological, embodied, enactive, and distributed approaches:** cognition occurs among body, tool, environment, and other people. Atlas should account for device, connectivity, interruptions, mobility, physical context, and collaboration, not only an abstract mind facing a perfect screen.
+- **Neuropsychology and neuroergonomics:** fatigue, vigilance, task switching, inhibitory control, sensory processing, and attentional rhythms should constrain density, notifications, and sequence length. Neuroscientific terms must not be used as a veneer of authority.
+- **Trauma-informed practices:** predictability, consent, choice, safety, collaboration, and the ability to pause reduce unnecessary reactivation. Sensitive content should have proportionate notices, intensity controls, and alternative paths.
+
+Atlas does not diagnose personality, mental health, intent, morality, or cognitive ability from clicks, response time, or language. Behavioral inferences should be minimal, contestable, and connected to a clear purpose.
+
+### Applied philosophy: from the pre-Socratics to contemporary schools
+
+The experience should carry centuries of philosophical questions without becoming an ornamental encyclopedia. Traditions operate as lenses for concrete product decisions:
+
+- From the **pre-Socratics**, Heraclitus inspires systems that make change and process intelligible; Parmenides demands clarity about identity and persistence; atomists, pluralists, and Pythagoreans invite thought about composition, measure, chance, necessity, and order.
+- **Socratic** inquiry inspires questions that help without humiliating; Plato warns about appearance, representation, and the power of mediation; Aristotle offers habit, practical wisdom, causality, virtue, community, and flourishing as criteria for judging a good interaction.
+- **Stoicism, Epicureanism, skepticism, and Cynicism** distinguish control from the uncontrollable, pleasure from excess, certainty from suspended judgment, and convention from authentic life. The system should reduce operational anxiety, communicate uncertainty, and avoid manufacturing desires that only it promises to satisfy.
+- **Medieval, Jewish, and Islamic traditions** contribute debates about intention, responsibility, care, community, interpretation, and the limits of reason. **Buddhist, Hindu, Jain, Daoist, and Confucian schools** add impermanence, interdependence, nonviolence, attention, harmony, relational duty, and self-cultivation.
+- **African, Afro-diasporic, and Indigenous American philosophies**, including Ubuntu and relational perspectives, challenge the isolated individual as the universal unit of design and emphasize reciprocity, ancestry, territory, community, and a plurality of worlds.
+- **Rationalism** demands consistency and explainability; **empiricism** requires observation and testing; Hume reminds us of the roles of habit and affect; **social-contract theory** asks which rules could be accepted; Kant demands autonomy, dignity, and people treated as ends rather than means.
+- **Utilitarianism, virtue ethics, deontology, pragmatism, and care ethics** offer criteria that may diverge: aggregate consequences, character, duty, practical effects, and relational responsibility. UX decisions should record which criterion they prioritize and who bears the cost.
+- **Hegel, Marx, and critical traditions** show that recognition, labor, alienation, ideology, class, and structure shape experience. An “efficient” workflow may merely shift labor, obscure exploitation, or adapt users to an unjust condition.
+- **Phenomenology, hermeneutics, and existentialism** place body, temporality, situation, interpretation, freedom, anxiety, and meaning at the center. Metrics do not replace descriptions of lived experience.
+- **Nietzsche, genealogy, and psychoanalysis** invite us to ask what values, desires, and relations of force an interface produces—not only whether users click it.
+- **Analytic philosophy, philosophy of language, and pragmatics** demand precise concepts, honest speech acts, messages without accidental ambiguity, and distinctions among assertion, recommendation, prediction, and command.
+- **Critical theory, structuralism, post-structuralism, and deconstruction** help reveal ideology, discipline, normalization, binaries, silences, and exclusions inscribed in categories, forms, and algorithms.
+- **Feminisms, care ethics, queer theory, critical race studies, postcolonialism, and decolonial thought** require presumed universality, neutrality, and the “default” user to be continually examined.
+- **Philosophies of technology, information, and mind**, posthumanism, transhumanism, new materialism, environmental ethics, and AI ethics extend the questions to distributed agency, automation, surveillance, technical dependency, sustainability, and coexistence between humans and intelligent systems.
+
+The goal is not to declare one school the winner. Atlas should make tensions visible: efficiency versus care, personalization versus privacy, smoothness versus deliberation, autonomy versus protection, individual freedom versus collective consequence, and simple explanation versus fidelity to complexity.
+
+### Sociology applied to experience
+
+Users do not enter the system as abstract individuals. They arrive shaped by class, race, gender, generation, territory, language, education, disability, profession, institutions, and histories of technological trust or exclusion.
+
+- Comte, Marx, Durkheim, Weber, and Simmel offer problems of order, conflict, solidarity, anomie, rationalization, bureaucracy, authority, and metropolitan life.
+- Symbolic interactionism, social dramaturgy, social phenomenology, and ethnomethodology show how identity, normality, and meaning are negotiated in small encounters—including fields, messages, and permission prompts.
+- Goffman helps examine presentation of self, stigma, face, and institutions; labeling and self-fulfilling prophecy warn against categories that begin producing the behavior they claim merely to describe.
+- The Frankfurt School, Gramsci, Habermas, and cultural studies interrogate the culture industry, hegemony, the public sphere, instrumental rationality, and communication.
+- Foucault makes discipline, surveillance, examination, normalization, governmentality, and biopolitics visible; Bourdieu adds habitus, field, and economic, cultural, social, and symbolic capital.
+- Feminisms and intersectionality show that power and disadvantage operate simultaneously; studies of race, disability, coloniality, and subalternity reveal costs hidden by aggregate averages.
+- Systems theory, actor-network theory, and science and technology studies treat documents, models, APIs, metrics, and devices as participants that reorganize action and responsibility.
+- Contemporary sociology contributes network society, platform capitalism, datafication, invisible labor, precarity, the attention economy, epistemic bubbles, disinformation, liquid modernity, risk society, social acceleration, and the Anthropocene.
+
+Applying sociology means asking: who can enter, who understands the language, who appears in the data, who is misclassified, who performs additional labor, who can contest a decision, who receives the benefit, and who absorbs the risk. Global metrics should be examinable by context without creating surveillance or exposure for vulnerable groups.
+
+### Concrete interaction contract
+
+| Moment | Desired experience | System requirement |
+|---|---|---|
+| First contact | Safety and curiosity | Clear value proposition, immediate example, inclusive language, and a start without unnecessary configuration |
+| Onboarding | Orientation with autonomy | Progressive disclosure, ability to skip and resume, and a choice of help level |
+| Data entry | Trust | Explained purpose, minimal collection, validation near the field, and preservation of completed input |
+| Waiting | Predictability | Visible state, honest estimate when possible, cancellation, and no animation that simulates false progress |
+| Success | Competence | Specific confirmation, verifiable result, and an optional next step without disproportionate celebration |
+| Error | Recovery without shame | Non-accusatory language, comprehensible cause, preserved data, actionable correction, and a support identifier |
+| AI recommendation | Calibrated trust | Sources, uncertainty, alternatives, distinction between fact and inference, and the ability to reject or edit |
+| Sensitive action | Deliberation | Consequences before confirmation, explicit scope, meaningful approval, idempotency, and rollback when possible |
+| Return to the system | Continuity | Restored context, summary of changes, and no punishment for time away |
+| Exit | Respect | Simple cancellation, comprehensible export and deletion, and no guilt, obstruction, or surprise loss |
+
+### Ethical persuasion, welcome, and boundaries
+
+Every interface influences: it organizes options, sets defaults, distributes attention, and frames consequences. Atlas may use encouraging microcopy, visible progress, user-chosen goals, configurable reminders, local personalization, relevant examples, and adaptive feedback to stimulate interaction. Influence, however, should expand competence and future freedom. A good stimulus makes users less dependent on the system to understand what they are doing.
+
+The following are incompatible with the project: dark patterns; false urgency; guilt for absence; visually hidden refusal options; presumed consent; insistent notifications; random rewards aimed at compulsion; anthropomorphism that simulates emotional attachment to obtain data or payment; artificial difficulty designed to sell relief; vanity metrics used as pressure; personalization based on emotional fragility; and interfaces that deliberately blur recommendation, advertising, and obligation.
+
+Welcome also requires boundaries. The system must not pretend to possess emotions, consciousness, friendship, clinical authority, or certainty it does not have. It can be warm, attentive, and pleasant without deceiving users about its nature. When medical, legal, financial, psychological, or physical risk is present, the experience should slow down, state limitations, and route toward qualified human judgment.
+
+### Evaluation and experience evidence
+
+Success will not be measured only through retention, frequency, screen time, or click volume. Those numbers may indicate value, confusion, obligation, or dependency and require interpretation. Each significant flow should combine:
+
+- effectiveness: completion, correctness, reversibility, and time to value;
+- cognitive efficiency: perceived load, errors, backtracking, abandonment, and need for help;
+- affective quality: safety, comfort, curiosity, calibrated trust, and sense of competence;
+- autonomy: understanding of options, reversal rate, ease of refusal, export, and exit;
+- accessibility and fairness: performance with assistive technologies, different devices, languages, experience levels, and connectivity conditions;
+- trust: understanding of sources, uncertainty, data purpose, and automation limits;
+- longitudinal wellbeing: absence of compulsive pressure, avoidable fatigue, guilt, dependency, and excessive notifications;
+- qualitative evidence: interviews, contextual observation, usability tests, incident reports, and language analysis without reducing human experience to a single score.
+
+Every persuasive, adaptive, or emotionally intense feature should document its hypothesis, expected human benefit, affected groups, risk, safeguard, metric, contestation mechanism, and stopping condition. The final criterion is that people finish the interaction more capable, oriented, and free than when they began.
 
 ## Architecture
 

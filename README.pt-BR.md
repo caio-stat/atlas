@@ -16,6 +16,7 @@
 - [Visão geral](#visão-geral)
 - [Estado atual](#estado-atual)
 - [Visão e objetivos](#visão-e-objetivos)
+- [Experiência humana e interação](#experiência-humana-e-interação)
 - [Arquitetura](#arquitetura)
 - [Mapa do repositório](#mapa-do-repositório)
 - [Trilhas técnicas](#trilhas-técnicas)
@@ -119,6 +120,119 @@ Objetivos do projeto:
   transparência, justiça e sensibilidade social;
 - estudar como percepção, identidade, hábito, ética, comunidade e narrativa
   influenciam comportamento, confiança e bem-estar do usuário.
+
+## Experiência humana e interação
+
+O Atlas deve ser tecnicamente rigoroso e humanamente habitável. A experiência não é uma camada cosmética aplicada depois que backend, modelos e automações estão prontos; ela é uma propriedade transversal dos contratos, mensagens, tempos de resposta, padrões de navegação, documentação, políticas de dados, mecanismos de ajuda e possibilidades de contestação. Um sistema correto que produz ansiedade evitável, confusão, vergonha, sensação de vigilância ou perda de controle ainda está incompleto.
+
+O resultado humano pretendido é que cada pessoa se sinta **acolhida sem ser infantilizada, orientada sem ser controlada, estimulada sem ser sobrecarregada e respeitada sem precisar conquistar esse respeito**. O Atlas deve despertar curiosidade, prazer exploratório, confiança calibrada e vontade de continuar interagindo porque a interação entrega valor, responde com clareza e reconhece a autonomia do usuário — nunca porque explora compulsão, medo de perda, culpa ou vulnerabilidade.
+
+### Qualidades afetivas e cognitivas desejadas
+
+- **Acolhimento:** a primeira interação deve comunicar “você pode começar daqui”. Linguagem, exemplos e defaults devem reduzir ameaça, antecipar dúvidas e tornar seguro admitir desconhecimento.
+- **Agradabilidade:** legibilidade, ritmo, coerência visual, respostas rápidas, microinterações discretas e mensagens humanas devem produzir conforto sem esconder complexidade relevante.
+- **Curiosidade:** o sistema deve oferecer pistas, exemplos, prévias, perguntas úteis e caminhos progressivos que convidem à exploração sem transformar descoberta em caça confusa por funções.
+- **Competência:** cada ação deve produzir feedback que ajude a pessoa a compreender o que aconteceu, por que aconteceu e qual próximo passo é possível. O usuário deve perceber crescimento real de domínio.
+- **Autonomia:** recomendações devem continuar sendo recomendações. Alternativas, consequências, reversão, exportação, cancelamento e saída precisam permanecer visíveis e praticáveis.
+- **Pertencimento:** diferenças culturais, linguísticas, cognitivas, sensoriais e técnicas devem ser tratadas como parte normal da audiência, não como exceções inconvenientes.
+- **Confiança calibrada:** o Atlas deve reconhecer incerteza, limites, fontes, falhas e estado real da implementação. Segurança emocional não deve ser confundida com falsa certeza.
+- **Estímulo reflexivo:** além de executar tarefas, o sistema pode convidar o usuário a comparar hipóteses, revisar decisões, compreender tradeoffs e perceber relações entre técnica, sociedade e consequência.
+- **Recuperação:** erros devem ser reversíveis quando possível. Depois de falha, interrupção ou sobrecarga, o sistema deve oferecer um caminho curto de retorno, preservando contexto e trabalho realizado.
+
+### Psicologia aplicada à experiência
+
+O Atlas pode recorrer a um repertório psicológico amplo, desde que cada recurso tenha finalidade explícita, evidência proporcional e salvaguardas:
+
+- **Behaviorismo e aprendizagem:** reforço, modelagem, shaping, feedback imediato, prática deliberada, recuperação ativa, repetição espaçada e formação de hábito podem apoiar aprendizagem e continuidade. Não devem criar recompensas variáveis opacas, punição por ausência, streaks coercitivas ou dependência comportamental.
+- **Gestalt e psicologia da percepção:** proximidade, similaridade, continuidade, fechamento, destino comum e figura-fundo devem orientar hierarquia, agrupamento e foco. Contraste, saliência e movimento precisam destacar relevância, não sequestrar atenção.
+- **Cognitivismo:** carga intrínseca, extrínseca e germânica; memória de trabalho; chunking; reconhecimento em vez de recordação; modelos mentais; dupla codificação; atenção seletiva e metacognição devem fundamentar a arquitetura de informação. Complexidade deve ser revelada progressivamente, sem ocultar consequências.
+- **Construtivismo e teoria histórico-cultural:** exemplos, scaffolding, zona de desenvolvimento proximal, linguagem compartilhada e aprendizagem situada devem permitir que iniciantes avancem com apoio e que especialistas removam esse apoio sem atrito.
+- **Humanismo:** congruência, consideração positiva, escuta, empatia e tendência à realização inspiram mensagens que preservam dignidade. O erro pertence à interação e ao processo de aprendizagem; não é defeito moral do usuário.
+- **Psicologias fenomenológica e existencial:** a experiência vivida, a ambiguidade, a responsabilidade, a escolha e a produção de sentido importam tanto quanto taxa de conclusão. O sistema deve devolver agência em vez de reduzir a pessoa a um conjunto de eventos telemétricos.
+- **Psicanálises e psicologia profunda:** desejo, resistência, projeção, repetição, idealização, sombra, fantasia e mecanismos de defesa podem informar uma leitura crítica das relações entre usuário e tecnologia. Servem como lentes interpretativas e artísticas, nunca como diagnóstico remoto.
+- **Psicologia social:** reciprocidade, prova social, autoridade, conformidade, comparação, identidade de grupo, estigma, efeito espectador, difusão de responsabilidade e ameaça do estereótipo ajudam a prever como interfaces influenciam conduta. Esses fenômenos devem ser tornados legíveis, não explorados silenciosamente.
+- **Teoria da autodeterminação:** autonomia, competência e pertencimento devem sustentar motivação intrínseca. Metas, indicadores e celebrações só são saudáveis quando ajudam o usuário a reconhecer progresso que ele próprio valoriza.
+- **Ciência da decisão:** enquadramento, ancoragem, disponibilidade, aversão à perda, custo afundado, excesso de confiança, desconto temporal e fadiga decisória exigem defaults seguros, comparações honestas e consequências compreensíveis.
+- **Psicologia positiva e do bem-estar:** curiosidade, esperança realista, forças de caráter, gratidão, flow e significado podem enriquecer a experiência, desde que não se convertam em positividade tóxica ou ocultação de problemas estruturais.
+- **Abordagens ecológica, incorporada, enativa e distribuída:** cognição acontece entre corpo, ferramenta, ambiente e outras pessoas. O Atlas deve considerar dispositivo, conectividade, interrupções, mobilidade, contexto físico e colaboração, não apenas uma mente abstrata diante de uma tela perfeita.
+- **Neuropsicologia e neuroergonomia:** fadiga, vigilância, alternância de tarefas, controle inibitório, processamento sensorial e ritmos de atenção devem limitar densidade, notificações e duração das sequências. Termos neurocientíficos não devem ser usados como verniz de autoridade.
+- **Práticas informadas por trauma:** previsibilidade, consentimento, escolha, segurança, colaboração e possibilidade de pausa reduzem reativação desnecessária. Conteúdo sensível deve ter avisos proporcionais, controle de intensidade e rotas alternativas.
+
+O Atlas não diagnostica personalidade, saúde mental, intenção, moralidade ou capacidade cognitiva a partir de cliques, tempo de resposta ou linguagem. Inferências comportamentais devem ser mínimas, contestáveis e vinculadas a uma finalidade clara.
+
+### Filosofia aplicada: dos pré-socráticos às escolas contemporâneas
+
+A experiência deve ser capaz de carregar séculos de perguntas filosóficas sem se transformar em enciclopédia ornamental. As tradições funcionam como lentes para decisões concretas de produto:
+
+- Dos **pré-socráticos**, Heráclito inspira sistemas que tornam mudança e processo compreensíveis; Parmênides exige clareza sobre identidade e permanência; atomistas, pluralistas e pitagóricos convidam a pensar composição, medida, acaso, necessidade e ordem.
+- A investigação **socrática** inspira perguntas que ajudam sem humilhar; Platão alerta para aparência, representação e poder das mediações; Aristóteles oferece hábito, prudência, causalidade, virtude, comunidade e florescimento como critérios para julgar uma boa interação.
+- **Estoicismo, epicurismo, ceticismo e cinismo** distinguem controle e incontrolável, prazer e excesso, certeza e suspensão do juízo, convenção e vida autêntica. O sistema deve reduzir ansiedade operacional, comunicar incerteza e evitar fabricar desejos que só ele promete satisfazer.
+- Tradições **medievais, judaicas e islâmicas** contribuem com debates sobre intenção, responsabilidade, cuidado, comunidade, interpretação e limites da razão. Escolas **budistas, hindus, jainistas, taoistas e confucianas** acrescentam impermanência, interdependência, não violência, atenção, harmonia, dever relacional e cultivo de si.
+- Filosofias **africanas, afro-diaspóricas e ameríndias**, incluindo Ubuntu e perspectivas relacionais, questionam o indivíduo isolado como unidade universal de design e enfatizam reciprocidade, ancestralidade, território, comunidade e pluralidade de mundos.
+- O **racionalismo** demanda consistência e explicabilidade; o **empirismo** exige observação e teste; o pensamento de Hume recorda o papel do hábito e do afeto; o **contratualismo** pergunta quais regras poderiam ser aceitas; Kant exige autonomia, dignidade e pessoas tratadas como fins, não meios.
+- **Utilitarismo, ética da virtude, deontologia, pragmatismo e ética do cuidado** oferecem critérios que podem divergir: consequências agregadas, caráter, dever, efeitos práticos e responsabilidade relacional. Decisões de UX devem registrar qual critério priorizam e quem suporta o custo.
+- **Hegel, Marx e tradições críticas** mostram que reconhecimento, trabalho, alienação, ideologia, classe e estrutura moldam a experiência. Um fluxo “eficiente” pode apenas deslocar trabalho, invisibilizar exploração ou adaptar o usuário a uma condição injusta.
+- **Fenomenologia, hermenêutica e existencialismo** colocam corpo, temporalidade, situação, interpretação, liberdade, angústia e sentido no centro. Métricas não substituem a descrição da experiência vivida.
+- **Nietzsche, genealogia e psicanálise** convidam a perguntar que valores, desejos e relações de força uma interface produz — e não apenas se usuários clicam nela.
+- **Filosofia analítica, filosofia da linguagem e pragmática** exigem conceitos precisos, atos de fala honestos, mensagens sem ambiguidade acidental e distinção entre afirmação, recomendação, previsão e ordem.
+- **Teoria crítica, estruturalismo, pós-estruturalismo e desconstrução** ajudam a revelar ideologia, disciplina, normalização, binarismos, silêncios e exclusões inscritos em categorias, formulários e algoritmos.
+- **Feminismos, ética do cuidado, teoria queer, estudos críticos de raça, pós-colonialismo e decolonialidade** exigem que universalidade presumida, neutralidade e usuário “padrão” sejam continuamente examinados.
+- **Filosofias da tecnologia, informação e mente**, pós-humanismo, transumanismo, novo materialismo, ética ambiental e ética da IA ampliam as perguntas para agência distribuída, automação, vigilância, dependência técnica, sustentabilidade e convivência entre humanos e sistemas inteligentes.
+
+O objetivo não é declarar uma escola vencedora. O Atlas deve tornar tensões visíveis: eficiência versus cuidado, personalização versus privacidade, fluidez versus deliberação, autonomia versus proteção, liberdade individual versus consequência coletiva, explicação simples versus fidelidade à complexidade.
+
+### Sociologia aplicada à experiência
+
+Usuários não chegam ao sistema como indivíduos abstratos. Chegam atravessados por classe, raça, gênero, geração, território, idioma, escolaridade, deficiência, profissão, instituições e histórias de confiança ou exclusão tecnológica.
+
+- Comte, Marx, Durkheim, Weber e Simmel oferecem problemas de ordem, conflito, solidariedade, anomia, racionalização, burocracia, autoridade e vida metropolitana.
+- Interacionismo simbólico, dramaturgia social, fenomenologia social e etnometodologia mostram como identidade, normalidade e sentido são negociados em pequenos encontros — inclusive em campos, mensagens e permissões.
+- Goffman ajuda a examinar apresentação de si, estigma, face e instituições; rotulação e profecia autorrealizável alertam contra categorias que passam a produzir o comportamento que alegam apenas descrever.
+- Escola de Frankfurt, Gramsci, Habermas e estudos culturais interrogam indústria cultural, hegemonia, esfera pública, racionalidade instrumental e comunicação.
+- Foucault torna visíveis disciplina, vigilância, exame, normalização, governamentalidade e biopolítica; Bourdieu acrescenta habitus, campo e capitais econômico, cultural, social e simbólico.
+- Feminismos e interseccionalidade mostram que poder e desvantagem operam simultaneamente; estudos de raça, deficiência, colonialidade e subalternidade revelam custos escondidos por médias agregadas.
+- Teoria dos sistemas, ator-rede e estudos de ciência e tecnologia tratam documentos, modelos, APIs, métricas e dispositivos como participantes que reorganizam ação e responsabilidade.
+- Sociologia contemporânea contribui com sociedade em rede, capitalismo de plataforma, datificação, trabalho invisível, precarização, economia da atenção, bolhas epistêmicas, desinformação, modernidade líquida, sociedade de risco, aceleração social e antropoceno.
+
+Aplicar sociologia significa perguntar: quem consegue entrar, quem entende a linguagem, quem aparece nos dados, quem é classificado incorretamente, quem realiza trabalho adicional, quem pode contestar uma decisão, quem recebe benefício e quem absorve risco. Métricas globais devem poder ser examinadas por contexto sem criar vigilância ou exposição de grupos vulneráveis.
+
+### Contrato concreto de interação
+
+| Momento | Experiência desejada | Requisito do sistema |
+|---|---|---|
+| Primeiro contato | Segurança e curiosidade | Proposta de valor clara, exemplo imediato, linguagem inclusiva e início sem configuração desnecessária |
+| Onboarding | Orientação com autonomia | Divulgação progressiva, possibilidade de pular, retomar e escolher nível de ajuda |
+| Entrada de dados | Confiança | Finalidade explicada, coleta mínima, validação próxima ao campo e preservação do que já foi preenchido |
+| Espera | Previsibilidade | Estado visível, estimativa honesta quando possível, cancelamento e ausência de animação que simule progresso falso |
+| Sucesso | Competência | Confirmação específica, resultado verificável e próximo passo opcional, sem celebração desproporcional |
+| Erro | Recuperação sem vergonha | Linguagem não acusatória, causa compreensível, dados preservados, correção acionável e identificador para suporte |
+| Recomendação de IA | Confiança calibrada | Fontes, incerteza, alternativas, distinção entre fato e inferência e possibilidade de rejeitar ou editar |
+| Ação sensível | Deliberação | Consequências antes da confirmação, escopo explícito, aprovação significativa, idempotência e rollback quando possível |
+| Retorno ao sistema | Continuidade | Contexto restaurado, mudanças resumidas e nenhuma punição por ausência |
+| Saída | Respeito | Cancelamento simples, exportação e exclusão compreensíveis, sem culpa, obstrução ou perda surpresa |
+
+### Persuasão ética, acolhimento e limites
+
+Toda interface influencia: organiza opções, define defaults, distribui atenção e enquadra consequências. O Atlas pode usar microcopy encorajadora, progressão visível, metas escolhidas, lembretes configuráveis, personalização local, exemplos relevantes e feedback adaptativo para estimular interação. Contudo, a influência deve ampliar competência e liberdade futura. Um bom estímulo torna o usuário menos dependente do sistema para compreender o que está fazendo.
+
+São incompatíveis com o projeto: dark patterns; urgência falsa; culpa por ausência; opções de recusa visualmente escondidas; consentimento presumido; notificações insistentes; recompensas aleatórias voltadas à compulsão; antropomorfização que simule vínculo afetivo para obter dados ou pagamento; dificuldade artificial para vender alívio; métricas de vaidade usadas para pressionar; personalização baseada em fragilidade emocional; e interfaces que confundam deliberadamente recomendação, publicidade e obrigação.
+
+Acolhimento também requer limites. O sistema não deve fingir emoções, consciência, amizade, autoridade clínica ou certeza que não possui. Pode ser caloroso, atento e agradável sem enganar sobre sua natureza. Quando houver risco médico, jurídico, financeiro, psicológico ou físico, a experiência deve desacelerar, explicitar limites e encaminhar para julgamento humano qualificado.
+
+### Avaliação e evidências da experiência
+
+Sucesso não será medido apenas por retenção, frequência, tempo de tela ou quantidade de cliques. Esses números podem indicar valor, confusão, obrigação ou dependência e precisam de interpretação. Cada fluxo relevante deve combinar:
+
+- eficácia: conclusão, correção, reversibilidade e tempo para valor;
+- eficiência cognitiva: carga percebida, erros, retornos, abandono e necessidade de ajuda;
+- qualidade afetiva: segurança, conforto, curiosidade, confiança calibrada e sensação de competência;
+- autonomia: compreensão das opções, taxa de reversão, facilidade de recusa, exportação e saída;
+- acessibilidade e justiça: desempenho com tecnologias assistivas, diferentes dispositivos, idiomas, níveis de experiência e condições de conectividade;
+- confiança: compreensão de fonte, incerteza, finalidade dos dados e limites da automação;
+- bem-estar longitudinal: ausência de pressão compulsiva, fadiga evitável, culpa, dependência e notificações excessivas;
+- evidência qualitativa: entrevistas, observação contextual, testes de usabilidade, relatos de incidentes e análise de linguagem, sem reduzir experiência humana a um score único.
+
+Toda funcionalidade persuasiva, adaptativa ou emocionalmente intensa deve documentar hipótese, benefício humano esperado, grupos afetados, risco, salvaguarda, métrica, mecanismo de contestação e condição de interrupção. O critério final é que a pessoa termine a interação mais capaz, orientada e livre do que quando começou.
 
 ## Arquitetura
 
