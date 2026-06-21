@@ -11,7 +11,9 @@
 Atlas documentation is part of the product. It explains what exists, what is
 planned, why a decision was made, how to run a capability, and what evidence
 supports a technical claim. This directory separates detailed material from
-the root README so the project landing page can remain navigable.
+the root README so the project landing page can remain navigable. It should
+also make visible the human assumptions behind each system: user context,
+psychological impact, social meaning, and ethical boundaries.
 
 ## Documentation map
 
@@ -87,6 +89,8 @@ Good Atlas documentation should answer:
 5. Which failures, risks, and limitations matter?
 6. What is implemented now and what is only planned?
 7. What evidence demonstrates quality?
+8. What human, psychological, sociological, or philosophical assumptions affect this component?
+9. How does this component affect trust, belonging, autonomy, and wellbeing?
 
 Prefer concrete examples, relative links, explicit status, and short diagrams.
 Avoid unsupported promises, copied marketing language, unexplained acronyms,

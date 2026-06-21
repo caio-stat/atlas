@@ -45,6 +45,10 @@ O projeto não pretende se tornar uma pilha de scripts sem relação ou um catá
 de tecnologias instaladas para aparência. Toda capacidade relevante deve
 evoluir para uma pequena fatia de produto com problema claro, contratos
 explícitos, código executável, testes, documentação, limitações e evidências.
+Além da qualidade técnica, o Atlas também deve apoiar clareza, confiança,
+pertencimento e bem-estar humano. O sistema deve ser pensado para ajudar o
+usuário a entender, escolher com informação, se sentir respeitado e experienciar
+uma sensação de segurança em seu contexto social e cultural.
 
 O Atlas começa como um **monólito modular**. Distribuição, filas, recursos cloud
 ou serviços independentes devem surgir somente quando um caso de uso
@@ -53,7 +57,7 @@ confiabilidade ou independência de deploy.
 
 A pergunta central é:
 
-> Como uma pessoa em formação técnica pode evoluir de scripts e notebooks para sistemas manuteníveis, produtos de dados confiáveis e aplicações inteligentes responsáveis?
+> Como uma pessoa em formação técnica pode evoluir de scripts e notebooks para sistemas manuteníveis, produtos de dados confiáveis e aplicações inteligentes responsáveis que também fortaleçam clareza, autonomia, pertencimento e bem-estar humano?
 
 ## Estado atual
 
@@ -110,7 +114,11 @@ Objetivos do projeto:
 - explorar redes, mensageria, concorrência, resiliência e observabilidade;
 - criar clientes mobile e edge com restrições explícitas de offline e segurança;
 - praticar DDD, TDD, arquitetura, refatoração e documentação de forma pragmática;
-- publicar demonstrações que expliquem premissas e limitações com honestidade.
+- publicar demonstrações que expliquem premissas e limitações com honestidade;
+- projetar interfaces, fluxos e políticas com segurança psicológica,
+  transparência, justiça e sensibilidade social;
+- estudar como percepção, identidade, hábito, ética, comunidade e narrativa
+  influenciam comportamento, confiança e bem-estar do usuário.
 
 ## Arquitetura
 
@@ -124,8 +132,10 @@ Objetivos do projeto:
 6. Aplicar DDD e TDD quando melhorarem linguagem, feedback e segurança de mudanças.
 7. Registrar decisões transversais ou caras por Architecture Decision Records.
 8. Tratar telemetria, segurança, privacidade, rollback e documentação como engenharia.
-9. Instalar dependências por trilha focada, não em um ambiente universal.
-10. Separar claramente arquitetura planejada de comportamento implementado.
+9. Projetar sistemas que respeitem autonomia, dignidade, contexto cultural e segurança psicológica.
+10. Preferir ciclos de feedback que reduzam confusão, apoiem reflexão e incentivem comportamentos saudáveis.
+11. Instalar dependências por trilha focada, não em um ambiente universal.
+12. Separar claramente arquitetura planejada de comportamento implementado.
 
 ### Runtime atual
 

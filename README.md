@@ -45,6 +45,10 @@ The project is not intended to become a pile of unrelated scripts or a catalog
 of technologies installed for appearance. Every meaningful capability should
 eventually become a small product slice with a clear problem, explicit
 contracts, runnable code, tests, documentation, limitations, and evidence.
+Beyond technical quality, Atlas should also support clarity, trust, belonging,
+and human wellbeing. The system should be designed to help users understand,
+make informed choices, feel respected, and experience a sense of safety within
+their social and cultural context.
 
 Atlas begins as a **modular monolith**. Distribution, queues, cloud resources,
 or independent services should appear only when an implemented use case creates
@@ -53,7 +57,7 @@ independence.
 
 The central question is:
 
-> How can a technical learner evolve from scripts and notebooks into maintainable systems, trustworthy data products, and responsible intelligent applications?
+> How can a technical learner evolve from scripts and notebooks into maintainable systems, trustworthy data products, and responsible intelligent applications that also strengthen clarity, autonomy, belonging, and human wellbeing?
 
 ## Current status
 
@@ -109,7 +113,11 @@ Project goals:
 - explore networks, messaging, concurrency, resilience, and observability;
 - create mobile and edge clients with explicit offline and safety constraints;
 - practice DDD, TDD, architecture, refactoring, and documentation pragmatically;
-- publish demonstrations that explain assumptions and limitations honestly.
+- publish demonstrations that explain assumptions and limitations honestly;
+- design interfaces, workflows, and policies with psychological safety,
+  transparency, fairness, and social awareness;
+- study how perception, identity, habit, ethics, community, and narrative
+  shape user behavior, trust, and wellbeing.
 
 ## Architecture
 
@@ -123,8 +131,10 @@ Project goals:
 6. Apply DDD and TDD when they improve language, feedback, and change safety.
 7. Record cross-cutting or costly decisions through Architecture Decision Records.
 8. Treat telemetry, security, privacy, rollback, and documentation as engineering work.
-9. Install dependencies by focused track instead of creating one universal environment.
-10. Keep planned architecture clearly separate from implemented behavior.
+9. Design systems that respect autonomy, dignity, cultural context, and psychological safety.
+10. Favor feedback loops that reduce confusion, support reflection, and encourage healthy user behavior.
+11. Install dependencies by focused track instead of creating one universal environment.
+12. Keep planned architecture clearly separate from implemented behavior.
 
 ### Current runtime
 

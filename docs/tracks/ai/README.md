@@ -8,7 +8,7 @@
 
 ## Mission
 
-The AI Lab explores model-assisted systems as engineered products rather than isolated prompts. Every workflow should make context sources, tool permissions, validation, fallback behavior, cost, and evaluation visible.
+The AI Lab explores model-assisted systems as engineered products rather than isolated prompts. Every workflow should make context sources, tool permissions, validation, fallback behavior, cost, and evaluation visible, while preserving human judgement, interpretability, trust, and social accountability.
 
 ## Expected outcomes
 
@@ -26,6 +26,7 @@ The AI Lab explores model-assisted systems as engineered products rather than is
 - Policy engines and guarded actions
 - Prompt, retrieval, and answer evaluation
 - Cost, latency, privacy, and fallback controls
+- Explainability, bias review, human oversight, and consent-aware behavior
 
 ## Reference deliverables
 
@@ -63,6 +64,7 @@ The AI Lab explores model-assisted systems as engineered products rather than is
 - Integration tests at external boundaries.
 - Versioned data, seeds, and configuration when required.
 - Technical and product metrics appropriate to the experiment.
+- Human-centered metrics such as explanation quality, trust calibration, error recovery, and fairness review.
 - README, examples, and limitations updated with the code.
 - No committed secrets or personal data.
 

@@ -11,7 +11,9 @@
 A documentação do Atlas faz parte do produto. Ela explica o que existe, o que
 está planejado, por que uma decisão foi tomada, como executar uma capacidade e
 quais evidências sustentam uma afirmação técnica. Esta pasta separa o material
-detalhado do README raiz para manter a apresentação do projeto navegável.
+detalhado do README raiz para manter a apresentação do projeto navegável. Ela
+também deve tornar visíveis os pressupostos humanos por trás de cada sistema:
+contexto do usuário, impacto psicológico, significado social e limites éticos.
 
 ## Mapa da documentação
 
@@ -88,6 +90,8 @@ Uma boa documentação do Atlas deve responder:
 5. Quais falhas, riscos e limitações importam?
 6. O que está implementado e o que está apenas planejado?
 7. Quais evidências demonstram qualidade?
+8. Quais pressupostos humanos, psicológicos, sociológicos ou filosóficos afetam este componente?
+9. Como este componente afeta confiança, pertencimento, autonomia e bem-estar?
 
 Prefira exemplos concretos, links relativos, status explícito e diagramas curtos.
 Evite promessas sem evidência, linguagem promocional copiada, siglas sem

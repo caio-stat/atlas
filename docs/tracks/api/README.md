@@ -8,7 +8,7 @@
 
 ## Mission
 
-Atlas API is the primary entry point for clients during the foundation phase. It should translate HTTP concerns into application calls, keep business rules outside route handlers, and make operational state visible through health, version, and future readiness endpoints.
+Atlas API is the primary entry point for clients during the foundation phase. It should translate HTTP concerns into application calls, keep business rules outside route handlers, make operational state visible through health, version, and future readiness endpoints, and support trust, transparency, and informed interaction for every user and client.
 
 ## Expected outcomes
 
@@ -26,6 +26,7 @@ Atlas API is the primary entry point for clients during the foundation phase. It
 - OpenAPI documentation and examples
 - Authentication and authorization boundaries
 - Pagination, idempotency, and correlation IDs
+- Clear error semantics, consent signals, and accessibility-friendly responses
 
 ## Reference deliverables
 
@@ -62,6 +63,7 @@ Atlas API is the primary entry point for clients during the foundation phase. It
 - Integration tests at database, network, file, or provider boundaries.
 - Versioned data, seeds, and configuration whenever reproduction depends on them.
 - Technical and product metrics appropriate to the experiment.
+- Behavioral and trust metrics such as clarity of responses, recovery from failures, and user confidence.
 - README, usage examples, and limitation notes updated with the code.
 - No secrets, personal data, or heavy artifacts committed without justification.
 

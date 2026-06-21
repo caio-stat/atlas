@@ -17,6 +17,7 @@ Partially implemented. `main.py` and `database.py` contain executable code; API,
 - Own process startup and shutdown wiring
 - Expose infrastructure factories at the composition root
 - Keep dependency direction visible
+- Preserve predictable, transparent, and consent-aware behavior for users and clients
 
 ## Out of scope
 
@@ -49,8 +50,9 @@ The module should depend on more stable contracts and receive external details t
 
 - Test public behavior rather than framework details.
 - Use unit tests for pure rules and contract tests at boundaries.
-- Cover success, validation, known failures, and security behavior.
+- Cover success, validation, known failures, security behavior, and recovery flows.
 - Keep fixtures small, deterministic, and free of sensitive data.
+- Verify user-facing clarity, error messages, and accessibility of outputs when relevant.
 
 ## Evolution rules
 

@@ -38,7 +38,8 @@ Every implemented module should document:
 - runtime flow and failure behavior;
 - commands for local execution and verification;
 - test strategy and current coverage boundaries;
-- security, privacy, and operational considerations;
+- security, privacy, consent, accessibility, and operational considerations;
+- the expected human and social impact of the module, including fairness, transparency, and wellbeing;
 - extension rules and known limitations;
 - implementation status backed by repository evidence.
 

@@ -8,7 +8,7 @@
 
 ## Missão
 
-A Atlas API é o principal ponto de entrada para clientes durante a fase de fundação. Ela deve traduzir aspectos HTTP em chamadas da aplicação, manter regras de negócio fora dos handlers e tornar o estado operacional visível por endpoints de saúde, versão e futura prontidão.
+A Atlas API é o principal ponto de entrada para clientes durante a fase de fundação. Ela deve traduzir aspectos HTTP em chamadas da aplicação, manter regras de negócio fora dos handlers, tornar o estado operacional visível por endpoints de saúde, versão e futura prontidão, além de apoiar confiança, transparência e interação informada para todos os usuários e clientes.
 
 ## Resultados esperados
 
@@ -26,6 +26,7 @@ A Atlas API é o principal ponto de entrada para clientes durante a fase de fund
 - Documentação OpenAPI e exemplos
 - Fronteiras de autenticação e autorização
 - Paginação, idempotência e correlation IDs
+- Semântica clara de erro, sinais de consentimento e respostas acessíveis
 
 ## Entregáveis de referência
 
@@ -62,6 +63,7 @@ A Atlas API é o principal ponto de entrada para clientes durante a fase de fund
 - Testes de integração nas fronteiras com banco, rede, arquivos ou provedores.
 - Dados, seeds e configuração versionados quando a reprodução depender deles.
 - Métricas técnicas e de produto adequadas ao experimento.
+- Métricas de confiança e clareza, como entendimento das respostas, recuperação de falhas e segurança percebida.
 - README, exemplos de uso e registro de limitações atualizados junto ao código.
 - Nenhum segredo, dado pessoal ou artefato pesado versionado sem justificativa.
 

@@ -38,7 +38,8 @@ Cada módulo implementado deve documentar:
 - fluxo de execução e comportamento de falha;
 - comandos para execução e verificação local;
 - estratégia de testes e limites atuais de cobertura;
-- aspectos de segurança, privacidade e operação;
+- aspectos de segurança, privacidade, consentimento, acessibilidade e operação;
+- o impacto humano e social esperado do módulo, incluindo justiça, transparência e bem-estar;
 - regras de extensão e limitações conhecidas;
 - status de implementação apoiado por evidência do repositório.
 

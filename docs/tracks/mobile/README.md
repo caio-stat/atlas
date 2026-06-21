@@ -8,7 +8,7 @@
 
 ## Mission
 
-The Mobile Lab brings Atlas capabilities to constrained and intermittently connected devices. The initial product, Atlas Pocket, should consume the existing API before adding local persistence, synchronization, camera workflows, notifications, and mobile inference.
+The Mobile Lab brings Atlas capabilities to constrained and intermittently connected devices. The initial product, Atlas Pocket, should consume the existing API before adding local persistence, synchronization, camera workflows, notifications, and mobile inference, while preserving clarity, autonomy, accessibility, and trust for users in real contexts.
 
 ## Expected outcomes
 
@@ -26,6 +26,7 @@ The Mobile Lab brings Atlas capabilities to constrained and intermittently conne
 - Background work and notifications
 - Camera, QR code, and OCR flows
 - On-device and remote AI inference
+- Accessibility, cognitive load reduction, and consistent feedback design
 - Automated Android testing
 
 ## Reference deliverables
@@ -62,6 +63,7 @@ The Mobile Lab brings Atlas capabilities to constrained and intermittently conne
 - Integration tests at external boundaries.
 - Versioned data, seeds, and configuration when required.
 - Technical and product metrics appropriate to the experiment.
+- Behavioral and human-centered metrics such as comprehension, recovery from interruption, and confidence in use.
 - README, examples, and limitations updated with the code.
 - No committed secrets or personal data.
 

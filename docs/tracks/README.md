@@ -11,7 +11,8 @@
 Each track README defines a mission, technical scope, reference deliverables,
 dependency files, integration boundaries, quality evidence, an incremental
 roadmap, and a definition of done. A track is a product direction, not proof
-that every listed capability already exists.
+that every listed capability already exists. Every track should also describe
+how its design affects trust, belonging, autonomy, clarity, and human wellbeing.
 
 Use the catalog in this order:
 
@@ -74,5 +75,7 @@ Use the catalog in this order:
 
 Track documents must remain honest. Planned architectures should be labeled as
 planned; implemented behavior should link to source, tests, examples, or
-operational evidence. When a track becomes code, place its module README near
+operational evidence. They should also explain the intended human and social
+impact of the work, including fairness, transparency, accessibility, and
+ethical boundaries. When a track becomes code, place its module README near
 the implementation and link it back to this catalog.

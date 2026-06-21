@@ -11,7 +11,9 @@
 Cada README de trilha define missão, escopo técnico, entregáveis de referência,
 arquivos de dependências, fronteiras de integração, evidências de qualidade,
 roadmap incremental e definição de pronto. Uma trilha é uma direção de produto,
-não uma afirmação de que todas as capacidades listadas já existem.
+não uma afirmação de que todas as capacidades listadas já existem. Cada trilha
+também deve descrever como seu desenho afeta confiança, pertencimento,
+autonomia, clareza e bem-estar humano.
 
 Use o catálogo nesta ordem:
 
@@ -74,5 +76,7 @@ Use o catálogo nesta ordem:
 
 Os documentos devem permanecer honestos. Arquiteturas planejadas precisam ser
 identificadas como planejadas; comportamentos implementados devem apontar para
-código, testes, exemplos ou evidências operacionais. Quando uma trilha ganhar
+código, testes, exemplos ou evidências operacionais. Eles também devem explicar
+o impacto humano e social esperado do trabalho, incluindo justiça,
+transparência, acessibilidade e limites éticos. Quando uma trilha ganhar
 código, coloque o README do módulo perto da implementação e conecte-o a este catálogo.

@@ -8,7 +8,7 @@
 
 ## Missão
 
-O AI Lab explora sistemas assistidos por modelos como produtos de engenharia, não como prompts isolados. Cada workflow deve tornar visíveis as fontes de contexto, permissões de ferramentas, validação, fallback, custo e avaliação.
+O AI Lab explora sistemas assistidos por modelos como produtos de engenharia, não como prompts isolados. Cada fluxo deve tornar visíveis fontes de contexto, permissões de ferramentas, validação, fallback, custo e avaliação, preservando julgamento humano, interpretabilidade, confiança e responsabilidade social.
 
 ## Resultados esperados
 
@@ -26,6 +26,7 @@ O AI Lab explora sistemas assistidos por modelos como produtos de engenharia, n�
 - Motores de políticas e ações protegidas
 - Avaliação de prompts, recuperação e respostas
 - Controles de custo, latência, privacidade e fallback
+- Explicabilidade, revisão de viés, supervisão humana e comportamento orientado por consentimento
 
 ## Entregáveis de referência
 
@@ -63,6 +64,7 @@ O AI Lab explora sistemas assistidos por modelos como produtos de engenharia, n�
 - Testes de integração nas fronteiras externas.
 - Dados, seeds e configuração versionados quando necessários.
 - Métricas técnicas e de produto adequadas ao experimento.
+- Métricas centradas no usuário, como qualidade da explicação, calibração de confiança, recuperação de erro e revisão de justiça.
 - README, exemplos e limitações atualizados junto ao código.
 - Nenhum segredo ou dado pessoal versionado.
 

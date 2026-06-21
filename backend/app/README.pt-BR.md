@@ -17,6 +17,7 @@ Parcialmente implementado. `main.py` e `database.py` contêm código executável
 - Controlar wiring de inicialização e encerramento do processo
 - Expor factories de infraestrutura na raiz de composição
 - Manter visível a direção das dependências
+- Preservar comportamento previsível, transparente e orientado por consentimento para usuários e clientes
 
 ## Fora do escopo
 
@@ -49,8 +50,9 @@ O módulo deve depender de contratos mais estáveis e receber detalhes externos 
 
 - Teste o comportamento público, não detalhes do framework.
 - Use unit tests para regras puras e contract tests nas fronteiras.
-- Inclua casos felizes, validação, falhas conhecidas e segurança.
+- Inclua casos felizes, validação, falhas conhecidas, segurança e fluxos de recuperação.
 - Mantenha fixtures pequenas, determinísticas e sem dados sensíveis.
+- Verifique clareza para o usuário, mensagens de erro e acessibilidade das saídas quando relevante.
 
 ## Regras de evolução
 
