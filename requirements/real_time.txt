@@ -1,0 +1,52 @@
+# Async foundations
+anyio
+trio
+asyncio-mqtt
+
+# HTTP async clients
+httpx
+aiohttp
+
+# WebSocket
+websockets
+python-socketio
+
+# Server-Sent Events
+sse-starlette
+
+# FastAPI realtime support
+fastapi
+uvicorn[standard]
+
+# Redis Pub/Sub and queues
+redis
+rq
+celery
+
+# Message brokers and event streaming
+nats-py
+pika
+aio-pika
+kafka-python
+confluent-kafka
+paho-mqtt
+
+# Async database access
+asyncpg
+psycopg[binary]
+sqlalchemy
+
+# Background tasks and scheduling
+apscheduler
+prefect
+
+# Serialization
+orjson
+msgpack
+
+# Utilities
+python-dotenv
+rich
+typer
+loguru
+structlog

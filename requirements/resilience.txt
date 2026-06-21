@@ -1,0 +1,36 @@
+# Retry and fault tolerance
+tenacity
+backoff
+
+# Circuit breaker
+pybreaker
+circuitbreaker
+
+# Rate limiting
+limits
+slowapi
+
+# Health checks
+healthcheck
+
+# Observability
+prometheus-client
+opentelemetry-api
+opentelemetry-sdk
+sentry-sdk
+loguru
+structlog
+
+# Messaging / queues
+redis
+rq
+celery
+
+# Configuration
+python-dotenv
+pydantic-settings
+
+# Testing resilience
+pytest
+pytest-timeout
+pytest-benchmark

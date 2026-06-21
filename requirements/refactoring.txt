@@ -1,0 +1,25 @@
+# Refactoring and code analysis
+rope
+libcst
+bowler
+astroid
+
+# Formatting and linting
+ruff
+black
+isort
+
+# Type checking
+mypy
+pyright
+
+# Dead code and dependency analysis
+vulture
+deptry
+
+# Complexity
+radon
+
+# Utilities
+typer
+rich

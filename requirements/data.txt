@@ -1,7 +1,8 @@
 numpy
 pandas
 polars
-pyarrow
 duckdb
-missingno
-ydata-profiling
+pyarrow
+openpyxl
+xlrd
+xlsxwriter

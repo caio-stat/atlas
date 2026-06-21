@@ -1,0 +1,29 @@
+# Industrial protocols
+pymodbus
+minimalmodbus
+opcua
+asyncua
+python-can
+
+# Networking
+requests
+httpx
+websockets
+pyzmq
+
+# Messaging
+paho-mqtt
+nats-py
+redis
+
+# Data
+pandas
+numpy
+duckdb
+sqlalchemy
+
+# Monitoring
+prometheus-client
+psutil
+loguru
+structlog

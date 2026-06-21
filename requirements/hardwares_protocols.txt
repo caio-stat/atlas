@@ -1,0 +1,35 @@
+# Serial
+pyserial
+
+# Modbus
+pymodbus
+minimalmodbus
+
+# CAN bus
+python-can
+
+# MQTT
+paho-mqtt
+asyncio-mqtt
+
+# Bluetooth Low Energy
+bleak
+
+# OPC-UA
+opcua
+asyncua
+
+# Binary parsing
+construct
+bitarray
+
+# Networking
+requests
+httpx
+websockets
+
+# Utilities
+typer
+rich
+loguru
+python-dotenv

@@ -1,0 +1,21 @@
+# Plugin systems
+pluggy
+stevedore
+yapsy
+
+# Dynamic imports and package metadata
+importlib-metadata
+
+# Configuration
+pydantic-settings
+dynaconf
+python-dotenv
+
+# Validation
+pydantic
+
+# Utilities
+typer
+rich
+loguru
+structlog

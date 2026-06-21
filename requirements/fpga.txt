@@ -1,0 +1,20 @@
+
+# FPGA / HDL testing and tooling
+cocotb
+amaranth
+migen
+
+# Simulation and analysis
+numpy
+scipy
+matplotlib
+plotly
+
+# Binary data
+construct
+bitarray
+
+# Utilities
+typer
+rich
+pytest

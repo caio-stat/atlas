@@ -1,0 +1,11 @@
+# MicroPython tools
+mpremote
+adafruit-ampy
+
+# Serial communication
+pyserial
+
+# Utilities
+typer
+rich
+python-dotenv

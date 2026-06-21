@@ -1,1 +1,8 @@
 paho-mqtt
+asyncio-mqtt
+pyserial
+minimalmodbus
+pymodbus
+bleak
+asyncua
+opcua

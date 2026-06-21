@@ -1,0 +1,58 @@
+# AWS Core SDK
+boto3
+botocore
+
+# AWS CLI and configuration helpers
+awscli
+python-dotenv
+rich
+typer
+
+# AWS Data / Analytics
+awswrangler
+pyarrow
+pandas
+duckdb
+
+# AWS S3
+s3fs
+
+# AWS CloudFormation / Infrastructure
+troposphere
+cfn-lint
+
+# AWS CDK for Python
+aws-cdk-lib
+constructs
+
+# Pulumi AWS
+pulumi
+pulumi-aws
+
+# Terraform integration
+python-terraform
+
+# AWS testing and mocking
+moto
+localstack
+pytest
+
+# AWS Lambda utilities
+aws-lambda-powertools
+
+# AWS Secrets and security helpers
+cryptography
+pyjwt
+
+# SSH / remote automation
+paramiko
+fabric
+
+# Containers and deployment
+docker
+
+# Observability
+watchtower
+structlog
+loguru
+prometheus-client

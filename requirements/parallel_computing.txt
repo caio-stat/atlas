@@ -1,0 +1,27 @@
+# Parallel and distributed computing
+joblib
+loky
+dask
+distributed
+ray
+
+# Numeric acceleration
+numba
+cython
+
+# Data processing
+numpy
+pandas
+polars
+duckdb
+
+# Machine learning parallel support
+scikit-learn
+
+# Monitoring
+psutil
+tqdm
+
+# Testing and benchmarking
+pytest
+pytest-benchmark

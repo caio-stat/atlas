@@ -1,0 +1,6 @@
+godot-parser
+pygltflib
+trimesh
+moderngl
+pyopengl
+pyglet  

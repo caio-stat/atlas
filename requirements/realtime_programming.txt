@@ -1,0 +1,60 @@
+# Async and concurrency
+anyio
+trio
+uvloop
+
+# Event-driven programming
+rx
+blinker
+pyee
+
+# WebSocket and streaming
+websockets
+python-socketio
+sse-starlette
+
+# Messaging and pub/sub
+redis
+nats-py
+pika
+aio-pika
+paho-mqtt
+
+# Scheduling and background jobs
+apscheduler
+schedule
+prefect
+
+# System monitoring
+psutil
+py-cpuinfo
+
+# Serial, hardware and device communication
+pyserial
+minimalmodbus
+pymodbus
+bleak
+
+# Industrial / IoT protocols
+asyncua
+opcua
+
+# Control systems and signal processing
+control
+simple-pid
+scipy
+numpy
+
+# Simulation
+simpy
+
+# Data serialization
+orjson
+msgpack
+
+# CLI and utilities
+typer
+rich
+python-dotenv
+loguru
+structlog

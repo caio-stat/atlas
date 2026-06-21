@@ -1,0 +1,27 @@
+# Data models and rich objects
+pydantic
+attrs
+cattrs
+dataclasses-json
+
+# Typing support
+typing-extensions
+beartype
+typeguard
+
+# Object serialization
+marshmallow
+msgspec
+
+# Dependency injection
+dependency-injector
+injector
+punq
+
+# Functional helpers useful with OOP design
+returns
+
+# Utilities
+rich
+typer
+python-dotenv

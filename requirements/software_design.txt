@@ -1,0 +1,32 @@
+# Dependency injection
+dependency-injector
+injector
+punq
+
+# Plugin architecture
+pluggy
+stevedore
+
+# State machines
+transitions
+python-statemachine
+
+# Validation and settings
+pydantic
+pydantic-settings
+
+# Domain and workflow helpers
+returns
+networkx
+
+# API architecture support
+fastapi
+sqlalchemy
+sqlmodel
+
+# Utilities
+typer
+rich
+loguru
+structlog
+python-dotenv

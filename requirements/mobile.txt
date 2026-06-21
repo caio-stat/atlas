@@ -1,0 +1,12 @@
+kivy
+kivymd
+buildozer
+briefcase
+beeware
+plyer
+requests
+httpx
+websockets
+qrcode
+pillow
+python-dotenv

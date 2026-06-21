@@ -1,0 +1,26 @@
+# Math and control
+numpy
+scipy
+control
+simple-pid
+
+# Simulation
+simpy
+
+# Serial / hardware
+pyserial
+pymodbus
+python-can
+
+# Computer vision
+opencv-python
+pillow
+
+# Visualization
+matplotlib
+plotly
+
+# Utilities
+typer
+rich
+python-dotenv

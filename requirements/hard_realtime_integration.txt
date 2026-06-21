@@ -1,0 +1,36 @@
+# Native integration
+cffi
+cython
+pybind11
+maturin
+
+# Communication
+pyserial
+grpcio
+grpcio-tools
+protobuf
+pyzmq
+websockets
+
+# Messaging / events
+redis
+nats-py
+paho-mqtt
+pika
+aio-pika
+
+# Binary data / serialization
+msgpack
+orjson
+construct
+
+# Monitoring
+psutil
+prometheus-client
+loguru
+structlog
+
+# CLI and config
+typer
+rich
+python-dotenv

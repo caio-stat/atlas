@@ -1,0 +1,28 @@
+# 2D game development
+pygame
+arcade
+pyglet
+
+# Interactive graphics and creative coding
+ursina
+panda3d
+
+# Physics and simulation
+pymunk
+box2d-py
+
+# Math and vectors
+numpy
+scipy
+
+# Images and assets
+pillow
+
+# Audio
+sounddevice
+pydub
+
+# UI and tools
+rich
+typer
+python-dotenv

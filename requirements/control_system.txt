@@ -1,0 +1,7 @@
+numpy
+scipy
+control
+simple-pid
+simpy
+matplotlib
+plotly

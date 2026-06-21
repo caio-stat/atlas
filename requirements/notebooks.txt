@@ -1,0 +1,48 @@
+# Jupyter core
+jupyter
+jupyterlab
+notebook
+ipykernel
+ipywidgets
+
+# Notebook files and conversion
+nbformat
+nbconvert
+jupytext
+nbclient
+
+# Execute notebooks as pipelines/reports
+papermill
+
+# Notebook versioning and diff
+nbdime
+jupyterlab-git
+
+# Formatting and code quality inside notebooks
+jupyterlab-code-formatter
+black
+isort
+ruff
+
+# Visualization support
+matplotlib-inline
+plotly
+kaleido
+
+# Progress bars and notebook utilities
+tqdm
+watermark
+python-dotenv
+
+# Interactive reports and apps from notebooks
+voila
+
+# Documentation from notebooks
+jupyter-book
+myst-nb
+
+# Data profiling and EDA reports
+ydata-profiling
+
+# Notebook caching
+jupyter-cache

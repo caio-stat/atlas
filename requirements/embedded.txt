@@ -1,0 +1,67 @@
+# Serial and device communication
+pyserial
+adafruit-blinka
+adafruit-circuitpython-busdevice
+
+# IoT protocols
+paho-mqtt
+asyncio-mqtt
+
+# Modbus
+pymodbus
+minimalmodbus
+
+# Bluetooth Low Energy
+bleak
+
+# CAN bus
+python-can
+
+# Data and plotting
+numpy
+pandas
+matplotlib
+plotly
+
+# Utilities
+typer
+rich
+python-dotenv
+
+# Web/API serving
+fastapi
+uvicorn[standard]
+gunicorn
+
+# Process and system automation
+supervisor
+honcho
+
+# Containers and deployment
+docker
+python-on-whales
+
+# Database migrations
+alembic
+sqlalchemy
+psycopg2-binary
+
+# Feature flags
+openfeature-sdk
+UnleashClient
+
+# Health checks and monitoring
+requests
+httpx
+prometheus-client
+psutil
+
+# Remote operations
+paramiko
+fabric
+invoke
+
+# Utilities
+typer
+rich
+python-dotenv

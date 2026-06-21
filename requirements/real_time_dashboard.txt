@@ -1,0 +1,36 @@
+# Data
+pandas
+numpy
+polars
+duckdb
+
+# Visualization
+plotly
+bokeh
+altair
+matplotlib
+
+# Realtime dashboards
+streamlit
+dash
+panel
+
+# Streamlit helpers
+streamlit-autorefresh
+
+# Web apps and APIs
+fastapi
+uvicorn[standard]
+websockets
+sse-starlette
+python-socketio
+
+# Monitoring and metrics
+prometheus-client
+psutil
+
+# Utilities
+requests
+httpx
+python-dotenv
+rich

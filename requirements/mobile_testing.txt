@@ -1,0 +1,6 @@
+appium-python-client
+adb-shell
+uiautomator2
+pytest
+pytest-html
+requests

@@ -1,0 +1,34 @@
+# Linting and formatting
+ruff
+black
+isort
+
+# Static typing
+mypy
+pyright
+basedpyright
+
+# Security analysis
+bandit
+pip-audit
+
+# Complexity and maintainability
+radon
+xenon
+vulture
+deptry
+
+# Documentation quality
+interrogate
+pydocstyle
+codespell
+
+# Import architecture checks
+import-linter
+
+# Git hooks
+pre-commit
+
+# Utilities
+rich
+typer

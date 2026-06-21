@@ -1,0 +1,53 @@
+# Power BI in Jupyter
+powerbiclient
+
+# Microsoft authentication
+msal
+azure-identity
+
+# Power BI REST API access
+requests
+httpx
+
+# Microsoft Fabric / Semantic Link
+semantic-link
+semantic-link-labs
+
+# Azure SDKs useful with Power BI/Fabric
+azure-core
+azure-storage-blob
+azure-mgmt-resource
+azure-mgmt-powerbiembedded
+azure-synapse-artifacts
+
+# Data handling
+pandas
+numpy
+pyarrow
+duckdb
+
+# SQL and tabular sources
+sqlalchemy
+pyodbc
+connectorx
+
+# Excel integration
+openpyxl
+xlsxwriter
+
+# Visualization for Python visuals and notebooks
+matplotlib
+seaborn
+plotly
+kaleido
+
+# Notebook support
+jupyter
+jupyterlab
+ipykernel
+ipywidgets
+
+# Environment and CLI helpers
+python-dotenv
+rich
+typer

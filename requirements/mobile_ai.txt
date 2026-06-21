@@ -1,0 +1,6 @@
+onnx
+onnxruntime
+tflite-runtime
+opencv-python
+pillow
+numpy

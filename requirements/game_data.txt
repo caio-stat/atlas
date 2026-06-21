@@ -1,0 +1,11 @@
+pandas
+numpy
+polars
+duckdb
+matplotlib
+seaborn
+plotly
+scipy
+statsmodels
+pingouin
+sympy

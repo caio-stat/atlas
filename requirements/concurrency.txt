@@ -1,0 +1,56 @@
+anyio
+trio
+uvloop
+rx
+blinker
+pyee
+redis
+celery
+rq
+
+apscheduler
+schedule
+prefect
+# Async foundations
+anyio
+trio
+
+# Async IO
+aiofiles
+aiohttp
+httpx
+
+# Event-driven programming
+rx
+blinker
+pyee
+
+# Queues and background workers
+redis
+rq
+celery
+dramatiq
+
+# Scheduling
+apscheduler
+schedule
+
+# Monitoring and profiling
+psutil
+py-spy
+pyinstrument
+
+# Testing concurrent code
+pytest
+pytest-asyncio
+pytest-timeout
+pytest-xdist
+hypothesis
+
+# Utilities
+rich
+typer
+python-dotenv
+loguru
+structlog
+tqdm

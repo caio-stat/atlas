@@ -1,0 +1,25 @@
+# Testing
+pytest
+pytest-cov
+hypothesis
+pytest-timeout
+pytest-benchmark
+
+# Static analysis / quality
+ruff
+black
+mypy
+bandit
+
+# Property-based testing and validation
+hypothesis
+pydantic
+
+# Logs and reports
+loguru
+structlog
+rich
+pytest-html
+
+# Fault injection / resilience experiments
+tenacity

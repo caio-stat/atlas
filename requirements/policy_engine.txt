@@ -1,0 +1,20 @@
+# Rules and policies
+durable-rules
+business-rules
+jsonlogic
+rule-engine
+
+# Validation
+pydantic
+jsonschema
+
+# Configuration
+pydantic-settings
+dynaconf
+python-dotenv
+
+# Utilities
+typer
+rich
+loguru
+structlog

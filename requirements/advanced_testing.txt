@@ -1,0 +1,32 @@
+# Testing
+pytest
+pytest-cov
+pytest-mock
+pytest-asyncio
+pytest-xdist
+pytest-timeout
+pytest-benchmark
+
+# Property-based testing
+hypothesis
+
+# Mutation testing
+mutmut
+
+# Test data
+faker
+factory-boy
+
+# Time and date testing
+freezegun
+
+# HTTP/API mocking
+responses
+respx
+
+# Coverage reports
+coverage
+pytest-html
+
+# Utilities
+rich

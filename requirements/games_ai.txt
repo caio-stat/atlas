@@ -1,0 +1,20 @@
+# Reinforcement Learning
+gymnasium
+stable-baselines3
+pettingzoo
+supersuit
+
+# Machine Learning
+scikit-learn
+numpy
+pandas
+
+# Deep Learning
+torch
+torchvision
+
+# Pathfinding and graphs
+networkx
+
+# Evolutionary algorithms
+deap

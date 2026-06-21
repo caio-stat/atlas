@@ -1,0 +1,41 @@
+# Agentic workflows
+langchain
+langchain-community
+langgraph
+llama-index
+pydantic-ai
+crewai
+autogen-agentchat
+
+# State machines and workflows
+transitions
+python-statemachine
+prefect
+
+# Scheduling and background execution
+apscheduler
+schedule
+celery
+rq
+redis
+
+# API and integration
+fastapi
+uvicorn[standard]
+requests
+httpx
+
+# Data and validation
+pydantic
+pydantic-settings
+jsonschema
+
+# Graphs and decision flow
+networkx
+
+# Utilities
+python-dotenv
+typer
+rich
+loguru
+structlog

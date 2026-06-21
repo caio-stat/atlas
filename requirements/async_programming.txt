@@ -1,0 +1,39 @@
+# Async runtime abstractions
+anyio
+trio
+
+# Async HTTP
+aiohttp
+httpx
+
+# WebSocket
+websockets
+python-socketio
+
+# Async files
+aiofiles
+
+# Async database
+asyncpg
+psycopg[binary]
+sqlalchemy
+
+# Messaging async
+aio-pika
+nats-py
+redis
+
+# Server-Sent Events
+sse-starlette
+
+# FastAPI async support
+fastapi
+uvicorn[standard]
+
+# Utilities
+orjson
+msgpack
+python-dotenv
+rich
+typer
+loguru

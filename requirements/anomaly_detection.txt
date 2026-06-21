@@ -1,0 +1,31 @@
+# Data
+numpy
+pandas
+polars
+duckdb
+
+# Statistics and ML
+scipy
+statsmodels
+scikit-learn
+
+# Anomaly detection
+pyod
+adtk
+ruptures
+river
+
+# Visualization
+matplotlib
+seaborn
+plotly
+
+# Monitoring data
+psutil
+prometheus-client
+
+# Utilities
+python-dotenv
+rich
+typer
+loguru

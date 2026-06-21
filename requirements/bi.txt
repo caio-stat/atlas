@@ -1,0 +1,53 @@
+# Core data analysis
+pandas
+numpy
+polars
+duckdb
+pyarrow
+
+# Data access
+sqlalchemy
+connectorx
+psycopg2-binary
+pyodbc
+requests
+httpx
+
+# Excel and tabular reports
+openpyxl
+xlsxwriter
+xlrd
+tabulate
+
+# Visualization
+matplotlib
+seaborn
+plotly
+altair
+bokeh
+
+# Dashboards and BI apps
+streamlit
+dash
+panel
+gradio
+
+# Data profiling and EDA reports
+ydata-profiling
+sweetviz
+missingno
+
+# Report generation
+jinja2
+weasyprint
+reportlab
+kaleido
+
+# Geospatial BI
+folium
+geopandas
+
+# Utilities
+python-dotenv
+rich
+typer

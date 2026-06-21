@@ -1,0 +1,38 @@
+# System monitoring
+psutil
+py-cpuinfo
+
+# Hardware / GPIO
+gpiozero
+RPi.GPIO
+
+# Networking
+requests
+httpx
+websockets
+paramiko
+fabric
+
+# Messaging
+paho-mqtt
+redis
+nats-py
+
+# API / local services
+fastapi
+uvicorn[standard]
+
+# Data
+sqlite-utils
+duckdb
+pandas
+
+# Observability
+prometheus-client
+loguru
+structlog
+
+# CLI
+typer
+rich
+python-dotenv

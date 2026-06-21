@@ -1,0 +1,33 @@
+# CLI
+typer
+click
+rich
+
+# Task automation
+invoke
+fabric
+plumbum
+
+# Scheduling
+schedule
+apscheduler
+
+# File watching
+watchdog
+
+# Environment/config
+python-dotenv
+pydantic-settings
+
+# Reports and output
+jinja2
+tabulate
+rich
+
+# HTTP/API automation
+requests
+httpx
+
+# Logging
+loguru
+structlog
