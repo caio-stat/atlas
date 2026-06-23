@@ -38,4 +38,18 @@ def test_create_data_source_rejects_empty_name():
             location="https://example.com",
         )
 
-    
+def test_create_data_source_rejects_empty_location():
+    with pytest.raises(InvalidDataSourceError):
+        DataSource.create(
+            name="Example Source",
+            source_type="api",
+            location="",
+        )
+
+def test_create_data_source_rejects_invalid_type():
+    with pytest.raises(InvalidDataSourceError):
+        DataSource.create(
+            name="Example",
+            source_type="uknown",
+            location="https://example.com",
+        )    
