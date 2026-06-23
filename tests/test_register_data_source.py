@@ -1,10 +1,10 @@
-import pytest_lazyfixture
-
+import pytest
 
 from app.domain.entities.data_source import DataSource
 from app.domain.errors import DuplicateDataSourceError
 from app.use_cases.register_data_source import (
     DataSourceRepository,
+    RegisterDataSource,
     RegisterDataSourceInput,
 )
 
@@ -25,11 +25,10 @@ def test_register_data_source_successfully():
     repository = InMemoryDataSourceRepository()
     use_case = RegisterDataSource(repository)
 
-    result = use_case.execute(
-        RegisterDataSourceInput(
-            name = "IBGE API",
-            source_type = "api",
-            location = "https://servicodados.ibge.gov.br/api/v1",   
+    input_data = RegisterDataSourceInput(
+        name="IBGE API",
+        type="api",
+        location="https://servicodados.ibge.gov.br/api/v1",
     )
 
     result = use_case.execute(input_data)
@@ -37,14 +36,15 @@ def test_register_data_source_successfully():
     assert result.name == "IBGE API"
     assert len(repository.items) == 1
 
-    def test_register_data_source_duplicate_name():
+
+def test_register_data_source_duplicate_name():
     repository = InMemoryDataSourceRepository()
     use_case = RegisterDataSource(repository)
 
     # Register a data source with a specific name
     input_data = RegisterDataSourceInput(
         name="IBGE API",
-        source_type="api",
+        type="api",
         location="https://servicodados.ibge.gov.br/api/v1",
     )
     use_case.execute(input_data)

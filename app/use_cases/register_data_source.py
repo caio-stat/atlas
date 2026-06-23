@@ -1,4 +1,4 @@
-from dataclass import dataclass
+from dataclasses import dataclass
 from typing import Protocol
 
 from app.domain.entities.data_source import DataSource, DataSourceType
@@ -11,13 +11,13 @@ class DataSourceRepository(Protocol):
     def save(self, data_source: DataSource) -> DataSource:
         ...
 
-    @dataclass
-    class RegisterDataSourceInput:
+@dataclass(frozen=True)
+class RegisterDataSourceInput:
         name: str
-        source_type: str | DataSourceType
+        type: str | DataSourceType
         location: str
 
-    class RegisterDataSource:
+class RegisterDataSource:
         def __init__(self,repository: DataSourceRepository) -> None:
             self.repository = repository
         
@@ -28,7 +28,7 @@ class DataSourceRepository(Protocol):
             
             data_source = DataSource.create(
                 name=input_data.name,
-                source_type=input_data.source_type,
+                type=input_data.type,
                 location=input_data.location,
             )
             return self.repository.save(data_source)

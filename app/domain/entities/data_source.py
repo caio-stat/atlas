@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from enum import Enum
-from uuid import UUID
+from uuid import UUID, uuid4
 
 from app.domain.errors import InvalidDataSourceError
 
@@ -27,7 +27,7 @@ class DataSource:
     def create(
         cls,
         name: str,
-        source_type: str | DataSourceType,
+        type: str | DataSourceType,
         location: str,
     ) -> "DataSource":
         normalized_name = name.strip()
@@ -39,7 +39,7 @@ class DataSource:
             raise InvalidDataSourceError("Data source location cannot be empty.")
         
         try:
-            normalized_type = DataSourceType(source_type) 
+            normalized_type = DataSourceType(type)
         except ValueError as exc:
             valid_types = ",".join(item.value for item in DataSourceType)
             raise InvalidDataSourceError(
@@ -49,6 +49,6 @@ class DataSource:
         return cls(
             id=uuid4(),
             name=normalized_name,
-            source_type=normalized_type,
+            type=normalized_type,
             location=normalized_location,
         )

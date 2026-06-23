@@ -11,19 +11,19 @@ from app.domain.errors import InvalidDataSourceError
 def test_create_data_source_with_valid_data():
     data_source = DataSource.create(
         name="IBGE API",
-        source_type="api",
+        type="api",
         location="https://servicodados.ibge.gov.br/api/v1",
     )
 
     assert data_source.name == "IBGE API"
-    assert data_source.source_type == DataSourceType.API
+    assert data_source.type == DataSourceType.API
     assert data_source.status == DataSourceStatus.ACTIVE
     assert data_source.location == "https://servicodados.ibge.gov.br/api/v1"
 
 def test_create_data_source_strips_name_and_location():
     data_source = DataSource.create(
             name="  DATASUS  ",
-            source_type="api",
+            type="api",
             location="  https://datasus.saude.gov.br  ",
     )
 
@@ -34,7 +34,7 @@ def test_create_data_source_rejects_empty_name():
     with pytest.raises(InvalidDataSourceError):
         DataSource.create(
             name="",
-            source_type="api",
+            type="api",
             location="https://example.com",
         )
 
@@ -42,7 +42,7 @@ def test_create_data_source_rejects_empty_location():
     with pytest.raises(InvalidDataSourceError):
         DataSource.create(
             name="Example Source",
-            source_type="api",
+            type="api",
             location="",
         )
 
@@ -50,6 +50,6 @@ def test_create_data_source_rejects_invalid_type():
     with pytest.raises(InvalidDataSourceError):
         DataSource.create(
             name="Example",
-            source_type="uknown",
+            type="uknown",
             location="https://example.com",
         )    
