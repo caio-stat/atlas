@@ -71,7 +71,7 @@ tracks and module boundaries in detail, while executable code remains small.
 | Root, health, and version endpoints | Implemented | [`backend/tests/test_health.py`](backend/tests/test_health.py) |
 | PostgreSQL local service | Configured | [`docker-compose.yml`](docker-compose.yml) |
 | SQLAlchemy engine and session factory | Initial scaffold | [`backend/app/database.py`](backend/app/database.py) |
-| Domain entity and registration use case | Empty scaffold | [`backend/app/domain`](backend/app/domain/README.md), [`backend/app/use_cases`](backend/app/use_cases/README.md) |
+| Domain entity and registration use case | Partial implementation | `DataSource` entity and `RegisterDataSource` use case started; repository adapter, API route, persistence and full tests still pending | [`backend/app/domain`](backend/app/domain/README.md), [`backend/app/use_cases`](backend/app/use_cases/README.md) |
 | Modular-monolith decision | ADR placeholder only | [`backend/0001-monolito-modular.md`](backend/0001-monolito-modular.md) |
 | Dependency tracks | 76 organized sets | [`requirements/README.md`](requirements/README.md) |
 | Technical-track documentation | 21 bilingual guides | [`docs/tracks/README.md`](docs/tracks/README.md) |

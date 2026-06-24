@@ -72,7 +72,7 @@ trilhas técnicas e as fronteiras dos módulos, enquanto o código executável a
 | Endpoints raiz, saúde e versão | Implementados | [`backend/tests/test_health.py`](backend/tests/test_health.py) |
 | Serviço PostgreSQL local | Configurado | [`docker-compose.yml`](docker-compose.yml) |
 | Engine e factory de sessão SQLAlchemy | Scaffold inicial | [`backend/app/database.py`](backend/app/database.py) |
-| Entidade e caso de registro | Scaffold vazio | [`backend/app/domain`](backend/app/domain/README.pt-BR.md), [`backend/app/use_cases`](backend/app/use_cases/README.pt-BR.md) |
+| Entidade de domínio e caso de uso de registro | Implementação parcial | Entidade `DataSource` e caso de uso `RegisterDataSource` iniciados; adapter de repositório, rota de API, persistência e testes completos ainda pendentes | [`backend/app/domain`](backend/app/domain/README.pt-BR.md), [`backend/app/use_cases`](backend/app/use_cases/README.pt-BR.md) |
 | Decisão sobre monólito modular | Apenas placeholder de ADR | [`backend/0001-monolito-modular.md`](backend/0001-monolito-modular.md) |
 | Trilhas de dependências | 76 conjuntos organizados | [`requirements/README.pt-BR.md`](requirements/README.pt-BR.md) |
 | Documentação das trilhas | 21 guias bilíngues | [`docs/tracks/README.pt-BR.md`](docs/tracks/README.pt-BR.md) |
